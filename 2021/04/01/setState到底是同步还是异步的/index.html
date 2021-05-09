@@ -1,0 +1,124 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><link rel="apple-touch-icon" sizes="76x76" href="/img/apple-touch-icon.png"><link rel="icon" type="image/png" href="/img/favicon.png"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,shrink-to-fit=no"><meta http-equiv="x-ua-compatible" content="ie=edge"><meta name="description" content=""><meta name="author" content="Anlex-Push"><meta name="keywords" content=""><title>setState到底是同步还是异步的 ~ Anlex-Push</title><link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/5.10.2/css/all.min.css"><link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css"><link rel="stylesheet" href="https://cdn.staticfile.org/mdbootstrap/4.8.9/css/mdb.min.css"><link rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/3.0.1/github-markdown.min.css"><link rel="stylesheet" href="//at.alicdn.com/t/font_1067060_qzomjdt8bmp.css"><link rel="stylesheet" href="/lib/prettify/tomorrow-night-eighties.min.css"><link rel="stylesheet" href="/css/main.css"><link rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css"><meta name="generator" content="Hexo 4.2.0"></head><body><header style="height:70vh"><nav id="navbar" class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar"><div class="container"> <a class="navbar-brand" href="/">&nbsp;<strong>Anlex-Push</strong>&nbsp;</a> <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><div class="animated-icon"><span></span><span></span><span></span></div></button><div class="collapse navbar-collapse" id="navbarSupportedContent"><ul class="navbar-nav ml-auto text-center"><li class="nav-item"> <a class="nav-link" href="/">首页</a></li><li class="nav-item"> <a class="nav-link" href="/archives/">归档</a></li><li class="nav-item"> <a class="nav-link" href="/categories/">分类</a></li><li class="nav-item"> <a class="nav-link" href="/tags/">标签</a></li><li class="nav-item"> <a class="nav-link" href="/about/">关于</a></li><li class="nav-item" id="search-btn"> <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;&nbsp;<i class="iconfont icon-search"></i>&nbsp;&nbsp;</a></li></ul></div></div></nav><div class="view intro-2" id="background" style="background:url(/img/article.png) no-repeat center center;background-size:cover;background-attachment:fixed"><div class="full-bg-img"><div class="mask rgba-black-light flex-center"><div class="container text-center white-text fadeInUp"><span class="h2" id="subtitle"></span><br><p class="mt-3"><i class="fas fa-calendar-alt" aria-hidden="true"></i> &nbsp; 星期四, 四月 1日 2021, 9:49 上午</p><p> &nbsp;<i class="far fa-chart-bar"></i> <span class="post-count">2.1k 字</span> &nbsp; &nbsp;<i class="far fa-clock"></i> <span class="post-count">7 分钟</span> &nbsp; &nbsp;<i class="far fa-eye" aria-hidden="true"></i>&nbsp;<span id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv"></span> 次</span> &nbsp;</p></div></div></div></div></header><main><div class="container-fluid"><div class="row"><div class="d-none d-lg-block col-lg-2"></div><div class="col-lg-8 nopadding-md"><div class="py-5 z-depth-3" id="board"><div class="post-content mx-auto" id="post"><div class="markdown-body"><p><img src="http://img.kuagra.top/wallhaven-3zlo9d_1920x1080.png" srcset="/img/loading.gif" alt=""></p><h1 id="setState到底是同步还是异步的呢？"><a href="#setState到底是同步还是异步的呢？" class="headerlink" title="setState到底是同步还是异步的呢？"></a>setState到底是同步还是异步的呢？</h1><p>setState在React管控下始终是异步的，在逃离React管控下时是同步的。如何理解呢，下面让我们走进react的更新机制去寻找一下。</p><h2 id="React的更新机制，异步的动机和原理，批量更新的艺术"><a href="#React的更新机制，异步的动机和原理，批量更新的艺术" class="headerlink" title="React的更新机制，异步的动机和原理，批量更新的艺术"></a>React的更新机制，异步的动机和原理，批量更新的艺术</h2><p>我们先来了解一下setState会触发到那些生命周期，如下所示：</p><pre><code>setState =&gt; shouldComponentUpdate =&gt; componentWillUpdate =&gt; render =&gt; componentDidUpdate</code></pre><p>试想一下，如果我们同时调用多个setState，每次setState都执行上面的流程的话，页面将会卡死；这也是React设置异步更新的动机–避免频繁的re-render。<br>setState的异步实现方式有点类似于Event-Loop: 每来一个setState，就把它放进一个队列里面，等待时机成熟，在把队列里面的state做一次合并，最后只针对最新的state值做一次更新流程，这个过程叫做“批量更新”。</p><h2 id="“同步现象”现象背后的故事：-从源码角度看setState工作流"><a href="#“同步现象”现象背后的故事：-从源码角度看setState工作流" class="headerlink" title="“同步现象”现象背后的故事： 从源码角度看setState工作流"></a>“同步现象”现象背后的故事： 从源码角度看setState工作流</h2><p>同步现象：当我们在setTimeout的保护之下，setState出现了同步现象。<br>为什么setTimeout可以将setState的执行顺序从异步变成同步的呢？<br>先给我一个结论：并不是setTimeout改变了setState，而是setTimeout帮助setState逃离了react对它的管控。只要是react管控下setState一定是异步的。<br>通过这个结论，我们去源码中寻找答案。</p><h3 id="解读setState的工作流"><a href="#解读setState的工作流" class="headerlink" title="解读setState的工作流"></a>解读setState的工作流</h3><p>setState的主工作流大致如下所示：</p><pre><code>                    setState
+                        |
+                    enqueueSetState
+                        |
+                    enqueueUpState
+                        |
+                    isBatchingUpdates
+                        |
+    ----true-----------------------------false-------
+    |                                               |
+组件入队                                        循环更新
+dirtyComponents                                dirtyComponents里面的所有组件</code></pre><h3 id="通过源码深入理解setState工作流"><a href="#通过源码深入理解setState工作流" class="headerlink" title="通过源码深入理解setState工作流"></a>通过源码深入理解setState工作流</h3><p>通过上面的流程，我们到源码中去看,首先是setState入口函数</p><pre><code class="javascript">ReactComponent.prototype.setState = function (partialState, callback) {
+    this.updater.enqueueSetState(this, partialState);
+    if (callback) {
+        this.updater.enqueueCallback(this, callback, &#39;setState&#39;);
+    }
+};</code></pre><p>入口函数在这里就是充当一个分发器的角色，根据入参的不同，将其分发到不同的功能函数中去。<br>在来看看enqueueSetState做了什么</p><pre><code class="javascript">enqueueSetState: function (publicInstance, partialState) {
+  // 根据 this 拿到对应的组件实例
+  var internalInstance = getInternalInstanceReadyForUpdate(publicInstance, &#39;setState&#39;);
+  // 这个 queue 对应的就是一个组件实例的 state 数组
+  var queue = internalInstance._pendingStateQueue || (internalInstance._pendingStateQueue = []);
+  queue.push(partialState);
+  //  enqueueUpdate 用来处理当前的组件实例
+  enqueueUpdate(internalInstance);
+}</code></pre><p>enqueueSetState大致做了两件事：</p><ul><li>将新的state放入组件状态队列里</li><li>用enqueueUpdate来处理将要更新的实例对象</li></ul><p>我们在去enqueueUpdate里面看看做什么事情</p><pre><code class="javascript">function enqueueUpdate(component) {
+  ensureInjected();
+  // 注意这一句是问题的关键，isBatchingUpdates标识着当前是否处于批量创建/更新组件的阶段
+  if (!batchingStrategy.isBatchingUpdates) {
+    // 若当前没有处于批量创建/更新组件的阶段，则立即更新组件
+    batchingStrategy.batchedUpdates(enqueueUpdate, component);
+    return;
+  }
+  // 否则，先把组件塞入 dirtyComponents 队列里，让它“再等等”
+  dirtyComponents.push(component);
+  if (component._updateBatchNumber == null) {
+    component._updateBatchNumber = updateBatchNumber + 1;
+  }
+}</code></pre><p>通过源码，我们看到enqueueUpdate中引入了一个关键对象—batchingStrategy。<br>该对象具备isBatchingUpdates属性，直接决定了当下要走的更新流程，还是排队等待。其中的batchedUpdates 方法更是能够直接发起更新流程。<br>由此我们可以看出：batchingStrategy 或许正是 React 内部专门用于管控批量更新的对象。</p><p>下面我们去看看batchingStrategy这个关键的对象</p><pre><code class="javascript">/**
+ * batchingStrategy源码
+**/
+var ReactDefaultBatchingStrategy = {
+  // 全局唯一的锁标识
+  isBatchingUpdates: false,
+  // 发起更新动作的方法
+  batchedUpdates: function(callback, a, b, c, d, e) {
+    // 缓存锁变量
+    var alreadyBatchingStrategy = ReactDefaultBatchingStrategy.isBatchingUpdates;
+    // 把锁“锁上”
+    ReactDefaultBatchingStrategy.isBatchingUpdates = true;
+    if (alreadyBatchingStrategy) {
+      callback(a, b, c, d, e);
+    } else {
+      // 启动事务，将 callback 放进事务里执行
+      transaction.perform(callback, null, a, b, c, d, e);
+    }
+  }
+}</code></pre><p>batchingStrategy 对象并不复杂，你可以理解为它是一个“锁管理器”。</p><p>这里的“锁”，是指 React 全局唯一的 isBatchingUpdates 变量，isBatchingUpdates 的初始值是 false，意味着“当前并未进行任何批量更新操作”。每当 React 调用 batchedUpdate 去执行更新动作时，会先把这个锁给“锁上”（置为 true），表明“现在正处于批量更新过程中”。当锁被“锁上”的时候，任何需要更新的组件都只能暂时进入 dirtyComponents 里排队等候下一次的批量更新，而不能随意“插队”。此处体现的“任务锁”的思想，是 React 面对大量状态仍然能够实现有序分批处理的基石。</p><p>在batchingStrategy中引入了一个硬核的东西</p><pre><code class="javascript">    transaction.perform(callback, null, a, b, c, d, e);</code></pre><p>这行代码为我们引出了一个更为硬核的概念——React 中的 Transaction（事务）机制。</p><h2 id="理解-React-中的-Transaction（事务）-机制"><a href="#理解-React-中的-Transaction（事务）-机制" class="headerlink" title="理解 React 中的 Transaction（事务） 机制"></a>理解 React 中的 Transaction（事务） 机制</h2><p>Transaction 在 React 源码中的分布可以说非常广泛。如果你在 Debug React 项目的过程中，发现函数调用栈中出现了 initialize、perform、close、closeAll 或者 notifyAll 这样的方法名，那么很可能你当前就处于一个 Trasaction 中。<br>Transaction 在 React 源码中表现为一个核心类，React 官方曾经这样描述它：<strong>Transaction 是创建一个黑盒，该黑盒能够封装任何的方法。</strong>因此，那些需要在函数运行前、后运行的方法可以通过此方法封装（即使函数运行中有异常抛出，这些固定的方法仍可运行），实例化 Transaction 时只需提供相关的方法即可。<br>下面是源码中的一段针对 Transaction 的注释：</p><pre><code class="javascript">* &lt;pre&gt;
+ *                       wrappers (injected at creation time)
+ *                                      +        +
+ *                                      |        |
+ *                    +-----------------|--------|--------------+
+ *                    |                 v        |              |
+ *                    |      +---------------+   |              |
+ *                    |   +--|    wrapper1   |---|----+         |
+ *                    |   |  +---------------+   v    |         |
+ *                    |   |          +-------------+  |         |
+ *                    |   |     +----|   wrapper2  |--------+   |
+ *                    |   |     |    +-------------+  |     |   |
+ *                    |   |     |                     |     |   |
+ *                    |   v     v                     v     v   | wrapper
+ *                    | +---+ +---+   +---------+   +---+ +---+ | invariants
+ * perform(anyMethod) | |   | |   |   |         |   |   | |   | | maintained
+ * +-----------------&gt;|-|---|-|---|--&gt;|anyMethod|---|---|-|---|-|--------&gt;
+ *                    | |   | |   |   |         |   |   | |   | |
+ *                    | |   | |   |   |         |   |   | |   | |
+ *                    | |   | |   |   |         |   |   | |   | |
+ *                    | +---+ +---+   +---------+   +---+ +---+ |
+ *                    |  initialize                    close    |
+ *                    +-----------------------------------------+
+ * &lt;/pre&gt;</code></pre><p>说白了，Transaction 就像是一个“壳子”，它首先会将目标函数用 wrapper（一组 initialize 及 close 方法称为一个 wrapper） 封装起来，同时需要使用 Transaction 类暴露的 perform 方法去执行它。如上面的注释所示，在 anyMethod 执行之前，perform 会先执行所有 wrapper 的 initialize 方法，执行完后，再执行所有 wrapper 的 close 方法。这就是 React 中的事务机制。</p><h2 id="“同步现象”的本质"><a href="#“同步现象”的本质" class="headerlink" title="“同步现象”的本质"></a>“同步现象”的本质</h2><p>通过对事务的理解，ReactDefaultBatchingStrategy 其实就是一个批量更新策略事务，它的 wrapper 有两个：FLUSH_BATCHED_UPDATES 和 RESET_BATCHED_UPDATES。</p><pre><code class="javascript">var RESET_BATCHED_UPDATES = {
+  initialize: emptyFunction,
+  close: function () {
+    ReactDefaultBatchingStrategy.isBatchingUpdates = false;
+  }
+};
+var FLUSH_BATCHED_UPDATES = {
+  initialize: emptyFunction,
+  close: ReactUpdates.flushBatchedUpdates.bind(ReactUpdates)
+};
+var TRANSACTION_WRAPPERS = [FLUSH_BATCHED_UPDATES, RESET_BATCHED_UPDATES];</code></pre><p>我们将这两个wrapper套入上面注释中去，不难得出这样的流程：<br>在callback执行完成后RESET_BATCHED_UPDATES将isBatchingUpdates修改为false，FLUSH_BATCHED_UPDATES执行flushBatchedUpdates，然后里面会循环所有的dirtyComponents,调用updateComponent来执行所有的生命周期方法。componentWillReceiveProps &gt; shouldComponentUpdate &gt; componentWillUpdate &gt; componentDidUpdate。 最后实现组件的更新。</p><p>其实batchingUpdates在很多地方都有调用，例如在首次渲染的时候：</p><pre><code class="javascript">// ReactMount.js
+_renderNewRootComponent: function( nextElement, container, shouldReuseMarkup, context ) {
+  // 实例化组件
+  var componentInstance = instantiateReactComponent(nextElement);
+  // 初始渲染直接调用 batchedUpdates 进行同步渲染
+  ReactUpdates.batchedUpdates(
+    batchedMountComponentIntoNode,
+    componentInstance,
+    container,
+    shouldReuseMarkup,
+    context
+  );
+  ...
+}</code></pre><p>这段代码是在首次渲染组件时会执行的一个方法，我们看到它内部调用了一次 batchedUpdates，这是因为在组件的渲染过程中，会按照顺序调用各个生命周期函数。开发者很有可能在声明周期函数中调用 setState。因此，我们需要通过开启 batch 来确保所有的更新都能够进入 dirtyComponents 里去，进而确保初始渲染流程中所有的 setState 都是生效的。</p><p>下面代码是 React 事件系统的一部分。当我们在组件上绑定了事件之后，事件中也有可能会触发 setState。为了确保每一次 setState 都有效，React 同样会在此处手动开启批量更新。</p><pre><code class="javascript">// ReactEventListener.js
+dispatchEvent: function (topLevelType, nativeEvent) {
+  ...
+  try {
+    // 处理事件
+    ReactUpdates.batchedUpdates(handleTopLevelImpl, bookKeeping);
+  } finally {
+    TopLevelCallbackBookKeeping.release(bookKeeping);
+  }
+}</code></pre><p>可以看出isBatchingUpdates 这个变量，在 React 的生命周期函数以及合成事件执行前，已经被 React 悄悄修改为了 true，这时我们所做的 setState 操作自然不会立即生效。当函数执行完毕后，事务的 close 方法会再把 isBatchingUpdates 改为 false。</p><p>我们都是知道setTimeout是异步执行的，它内部是完全没有约束的，而isBatchingUpdates又是在同步的修改，当setTimeout中的setState执行时，isBatchingUpdates早就被修改为了false。也就是我们之前说的逃离了react的管控，也就出现了同步更新的现象。<br><strong style="color:red">setState 并不是具备同步这种特性，只是在特定的情境下，它会从 React 的异步管控中“逃脱”掉。</strong></p><hr></div><br><div><p><span><i class="iconfont icon-tag"></i> <a class="hover-with-bg" href="/tags/react">react</a> <a class="hover-with-bg" href="/tags/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3react">深入理解react</a></span></p><p class="note note-warning">本博客所有文章除特别声明外，均采用 <a href="https://zh.wikipedia.org/wiki/Wikipedia:CC_BY-SA_3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" target="_blank" rel="nofollow noopener noopener">CC BY-SA 3.0协议</a> 。转载请注明出处！</p></div></div></div></div><div class="d-none d-lg-block col-lg-2 toc-container"><div id="toc"><p class="h4"><i class="far fa-list-alt"></i>&nbsp;目录</p><div id="tocbot"></div></div></div></div></div><div class="col-lg-7 mx-auto nopadding-md"><div class="container comments mx-auto" id="comments"></div></div></main><a class="z-depth-1" id="scroll-top-button" href="#" role="button"><i class="fa fa-chevron-up scroll-top-arrow" aria-hidden="true"></i></a><div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable modal-lg" role="document"><div class="modal-content"><div class="modal-header text-center"><h4 class="modal-title w-100 font-weight-bold">搜索</h4> <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span></button></div><div class="modal-body mx-3"><div class="md-form mb-5"> <input type="text" id="local-search-input" class="form-control validate"> <label data-error="x" data-success="v" for="local-search-input">关键词</label></div><div class="list-group" id="local-search-result"></div></div></div></div></div><footer class="mt-5"><div class="text-center py-3"><p> <b>猿生活</b> <a href="https://beianx.cn/bacx/%E8%9C%80icp%E5%A4%872020026020%E5%8F%B7-1" target="_blank" rel="nofollow noopener"><b>蜀ICP备2020026020号</b></a></p> &nbsp;<span id="busuanzi_container_site_pv"><span id="busuanzi_value_site_pv"></span></span> &nbsp; &nbsp;<span id="busuanzi_container_site_uv"><span id="busuanzi_value_site_uv"></span></span> &nbsp;<br></div></footer><script src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js"></script><script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script><script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script><script src="https://cdn.staticfile.org/mdbootstrap/4.8.9/js/mdb.min.js"></script><script src="/js/main.js"></script><script src="/js/lazyload.js"></script><script src="https://cdn.staticfile.org/tocbot/4.8.0/tocbot.min.js"></script><script src="/js/post.js"></script><script src="https://cdn.staticfile.org/smooth-scroll/16.1.0/smooth-scroll.min.js"></script><script src="https://cdn.staticfile.org/prettify/r298/prettify.min.js"></script><script>$(document).ready(function(){$("pre").addClass("prettyprint  linenums"),prettyPrint()})</script><script src="https://cdn.staticfile.org/typed.js/2.0.10/typed.min.js"></script><script>var typed=new Typed("#subtitle",{strings:["  ","setState到底是同步还是异步的&nbsp;"],cursorChar:"_",typeSpeed:70,loop:!1});typed.stop(),$(document).ready(function(){$(".typed-cursor").addClass("h2"),typed.start()})</script><script src="https://cdn.staticfile.org/anchor-js/4.2.0/anchor.min.js"></script><script>
+    anchors.options = {
+      placement: "right",
+      visible: "false",
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script><script src="/js/local-search.js"></script><script>var path="/local-search.xml",inputArea=document.querySelector("#local-search-input");inputArea.onclick=function(){getSearchFile(path),this.onclick=null}</script><script src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js"></script><script>$("#post img:not(.no-zoom img, img[no-zoom])").each(function(){var t=document.createElement("a");$(t).attr("data-fancybox","images"),$(t).attr("href",$(this).attr("src")),$(this).wrap(t)})</script><script type="text/javascript">var a_idx=0;jQuery(document).ready(function(d){d("body").click(function(a){var o=new Array("富强","民主","文明","和谐","自由","平等","公正","法治","爱国","敬业","诚信","友善"),t=d("<span/>").text(o[a_idx]);a_idx=(a_idx+1)%o.length;var n=a.pageX,e=a.pageY;t.css({"z-index":999,top:e-20,left:n,position:"absolute","font-weight":"bold",color:"rgb("+~~(255*Math.random())+","+~~(255*Math.random())+","+~~(255*Math.random())+")"}),d("body").append(t),t.animate({top:e-180,opacity:0},1500,function(){t.remove()})})})</script></body></html>

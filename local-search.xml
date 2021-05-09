@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  
+  
+  
+  <entry>
+    <title>JavaScript第一天</title>
+    <link href="/2021/05/09/JavaScript%E7%AC%AC%E4%B8%80%E5%A4%A9/"/>
+    <url>/2021/05/09/JavaScript%E7%AC%AC%E4%B8%80%E5%A4%A9/</url>
+    
+    <content type="html"><![CDATA[<p>开始学习挑战30天JavaScript的第一天。</p><h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>祝贺您决定参加30天的JavaScript编程挑战赛。 在这个挑战中，您将学到成为JavaScript程序员所需的一切，并且通常会学习整个编程概念。 挑战结束时，您将获得30DaysOfJavaScript编程挑战完成证书。 如果您需要帮助或想要帮助他人，可以加入电报组。</p><p>30DaysOfJavaScript挑战是面向初学者和高级JavaScript开发人员的指南。 欢迎使用JavaScript。 JavaScript是网络语言。 我喜欢使用和教授JavaScript，也希望您也能这样做。</p><p>在循序渐进的JavaScript挑战中，您将学习JavaScript，这是人类历史上最流行的编程语言。 JavaScript用于添加网站的交互性，开发移动应用程序，桌面应用程序，游戏，如今，JavaScript可用于机器学习和AI。 近年来，JavaScript（JS）越来越流行，并且已经连续六年成为领先的编程语言，并且是Github上使用最多的编程语言。</p><h1 id="要求"><a href="#要求" class="headerlink" title="要求"></a>要求</h1><p>不需要任何编程知识就可以应对这一挑战。 您只需要：</p><ol><li>学习动机</li><li>一台电脑</li><li>互联网</li><li>浏览器</li><li>代码编辑器</li></ol><h1 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h1><p>我相信您有成为开发人员，计算机和互联网的动力和强烈愿望。 如果有这些，那么您就有一切开始。</p><h2 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h2><p>您现在可能不需要node.js，但以后可能需要它。 安装node.js。<br>下载程序后双击安装<br>我们可以通过打开设备终端或命令提示符来检查是否在本地计算机上安装了节点。</p><pre><code>$ node -vv12.14.0</code></pre><p>在制作本教程时，我使用的是节点版本12.14.0，但是现在建议下载的node.js版本是12.17.0。</p><h1 id="浏览器"><a href="#浏览器" class="headerlink" title="浏览器"></a>浏览器</h1><p>有很多浏览器。 但是，我强烈建议您使用Google Chrome浏览器。</p><h2 id="下载-Google-Chrome"><a href="#下载-Google-Chrome" class="headerlink" title="下载 Google Chrome"></a>下载 Google Chrome</h2><p>直接搜索“Google Chrome” 下载安装即可</p><h2 id="打开谷歌浏览器控制台"><a href="#打开谷歌浏览器控制台" class="headerlink" title="打开谷歌浏览器控制台"></a>打开谷歌浏览器控制台</h2><p>您可以通过单击浏览器右上角的三个点，然后选择“更多工具-&gt;开发者工具”或使用键盘快捷键来打开Goog​​le Chrome控制台。 我更喜欢使用快捷方式。<br>使用键盘快捷键打开Chrome控制台。</p><pre><code>MacCommand+Option+JWindows/Linux:Ctl+Shift+J</code></pre><p>打开Goog​​le Chrome控制台后，尝试浏览标记的按钮。 我们将大部分时间花在控制台上。 控制台是您的JavaScript代码所在的地方。 Google Console V8引擎将您的JavaScript代码更改为机器代码。 让我们在Google Chrome控制台上编写JavaScript代码.</p><h2 id="在浏览器控制台编写代码"><a href="#在浏览器控制台编写代码" class="headerlink" title="在浏览器控制台编写代码"></a>在浏览器控制台编写代码</h2><p>我们可以在Google控制台或任何浏览器控制台上编写任何JavaScript代码。 但是，对于这一挑战，我们仅关注Google Chrome控制台。 使用以下命令打开控制台：</p><pre><code>MacCommand+Option+IWindows:Ctl+Shift+I</code></pre><h2 id="console-log"><a href="#console-log" class="headerlink" title="console.log"></a>console.log</h2><p>为了编写第一个JavaScript代码，我们使用了内置函数console.log（）。 我们传递了一个参数作为输入数据，该函数显示了输出。 我们在console.log（）函数中传递了“ Hello，World”作为输入数据或参数。</p><pre><code>console.log(&quot;Hello World!&quot;);</code></pre><h2 id="console-log-带有多个参数的日志"><a href="#console-log-带有多个参数的日志" class="headerlink" title="console.log 带有多个参数的日志"></a>console.log 带有多个参数的日志</h2><p>conole.log()函数可以采用多个参数，并用逗号分隔。 语法如下所示：console.log(param1，param2，param3)</p><pre><code>console.log(&#39;Hello&#39;, &#39;World&#39;, &#39;!&#39;)console.log(&#39;HAPPY&#39;, &#39;NEW&#39;, &#39;YEAR&#39;, 2020)console.log(&#39;Welcome&#39;, &#39;to&#39;, 30, &#39;Days&#39;, &#39;Of&#39;, &#39;JavaScript&#39;)</code></pre><p>您可以从上面的代码段看到，console.log()可以使用多个参数。<br>恭喜你！ 您使用console.log()编写了第一个JavaScript代码。</p><h2 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h2><p>我们在代码中添加注释。 注释对于使代码更具可读性并在我们的代码中留下备注非常重要。 JavaScript不会执行代码的注释部分。在JavaScript中，以//开头的任何文本行都是注释，而像/ * * /这样的内容也是注释。<br>示例：单行注释</p><pre><code>// This is the first comment// This is the second comment// I am a single line comment</code></pre><p>示例：多行注释</p><pre><code>/* This is a multiline commentMultiline comments can take multiple linesJavaScript is the language of the web*/</code></pre><h2 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h2><p>编程语言与人类语言相似。 英语或许多其他语言使用单词，短语，句子，复合句子及其他内容来传达有意义的信息。 语法的英语含义是单词和短语的排列，以创建一种语言形式良好的句子。 语法的技术定义是计算机语言中语句的结构。 编程语言具有语法。 JavaScript是一种编程语言，并且像其他编程语言一样，它具有自己的语法。 如果我们没有编写JavaScript可以理解的语法，它将引发不同类型的错误。 稍后，我们将探讨各种JavaScript错误。 现在，让我们看看语法错误</p><h2 id="算数"><a href="#算数" class="headerlink" title="算数"></a>算数</h2><p>现在，让我们练习更多使用google chrome控制台上的console.log（）编写数字数据类型的JavaScript代码的方法。 除了文本之外，我们还可以使用JavaScript进行数学计算。 让我们做以下简单的计算。 控制台可以直接使用参数，而无需console.log（）函数。 但是，它包含在本简介中，因为大多数挑战将在文本编辑器中进行，在该文本编辑器中必须强制使用该功能。 您可以直接按照控制台上的说明进行操作。</p><pre><code>console.log(2 + 3) // Additionconsole.log(3 - 2) // Subtractionconsole.log(2 * 3) // Multiplicationconsole.log(3 / 2) // Divisionconsole.log(3 % 2) // Modulus - finding remainderconsole.log(3 ** 2) // Exponentiation 3 ** 2 == 3 * 3</code></pre><h1 id="编辑器"><a href="#编辑器" class="headerlink" title="编辑器"></a>编辑器</h1><p>我们可以在浏览器控制台上编写代码，但不适用于较大的项目。 在实际的工作环境中，开发人员使用不同的代码编辑器来编写他们的代码。 在这30天的JavaScript挑战中，我们将使用Visual Studio Code。搜索下载安装即可</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>JavaScript的30天基础巩固</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>setState到底是同步还是异步的</title>
+    <link href="/2021/04/01/setState%E5%88%B0%E5%BA%95%E6%98%AF%E5%90%8C%E6%AD%A5%E8%BF%98%E6%98%AF%E5%BC%82%E6%AD%A5%E7%9A%84/"/>
+    <url>/2021/04/01/setState%E5%88%B0%E5%BA%95%E6%98%AF%E5%90%8C%E6%AD%A5%E8%BF%98%E6%98%AF%E5%BC%82%E6%AD%A5%E7%9A%84/</url>
+    
+    <content type="html"><![CDATA[<p><img src="http://img.kuagra.top/wallhaven-3zlo9d_1920x1080.png" srcset="/img/loading.gif" alt=""></p><h1 id="setState到底是同步还是异步的呢？"><a href="#setState到底是同步还是异步的呢？" class="headerlink" title="setState到底是同步还是异步的呢？"></a>setState到底是同步还是异步的呢？</h1><p>setState在React管控下始终是异步的，在逃离React管控下时是同步的。如何理解呢，下面让我们走进react的更新机制去寻找一下。</p><h2 id="React的更新机制，异步的动机和原理，批量更新的艺术"><a href="#React的更新机制，异步的动机和原理，批量更新的艺术" class="headerlink" title="React的更新机制，异步的动机和原理，批量更新的艺术"></a>React的更新机制，异步的动机和原理，批量更新的艺术</h2><p>我们先来了解一下setState会触发到那些生命周期，如下所示：</p><pre><code>setState =&gt; shouldComponentUpdate =&gt; componentWillUpdate =&gt; render =&gt; componentDidUpdate</code></pre><p>试想一下，如果我们同时调用多个setState，每次setState都执行上面的流程的话，页面将会卡死；这也是React设置异步更新的动机–避免频繁的re-render。<br>setState的异步实现方式有点类似于Event-Loop: 每来一个setState，就把它放进一个队列里面，等待时机成熟，在把队列里面的state做一次合并，最后只针对最新的state值做一次更新流程，这个过程叫做“批量更新”。</p><h2 id="“同步现象”现象背后的故事：-从源码角度看setState工作流"><a href="#“同步现象”现象背后的故事：-从源码角度看setState工作流" class="headerlink" title="“同步现象”现象背后的故事： 从源码角度看setState工作流"></a>“同步现象”现象背后的故事： 从源码角度看setState工作流</h2><p>同步现象：当我们在setTimeout的保护之下，setState出现了同步现象。<br>为什么setTimeout可以将setState的执行顺序从异步变成同步的呢？<br>先给我一个结论：并不是setTimeout改变了setState，而是setTimeout帮助setState逃离了react对它的管控。只要是react管控下setState一定是异步的。<br>通过这个结论，我们去源码中寻找答案。</p><h3 id="解读setState的工作流"><a href="#解读setState的工作流" class="headerlink" title="解读setState的工作流"></a>解读setState的工作流</h3><p>setState的主工作流大致如下所示：</p><pre><code>                    setState                        |                    enqueueSetState                        |                    enqueueUpState                        |                    isBatchingUpdates                        |    ----true-----------------------------false-------    |                                               |组件入队                                        循环更新dirtyComponents                                dirtyComponents里面的所有组件</code></pre><h3 id="通过源码深入理解setState工作流"><a href="#通过源码深入理解setState工作流" class="headerlink" title="通过源码深入理解setState工作流"></a>通过源码深入理解setState工作流</h3><p>通过上面的流程，我们到源码中去看,首先是setState入口函数</p><pre><code class="javascript">ReactComponent.prototype.setState = function (partialState, callback) {    this.updater.enqueueSetState(this, partialState);    if (callback) {        this.updater.enqueueCallback(this, callback, &#39;setState&#39;);    }};</code></pre><p>入口函数在这里就是充当一个分发器的角色，根据入参的不同，将其分发到不同的功能函数中去。<br>在来看看enqueueSetState做了什么</p><pre><code class="javascript">enqueueSetState: function (publicInstance, partialState) {  // 根据 this 拿到对应的组件实例  var internalInstance = getInternalInstanceReadyForUpdate(publicInstance, &#39;setState&#39;);  // 这个 queue 对应的就是一个组件实例的 state 数组  var queue = internalInstance._pendingStateQueue || (internalInstance._pendingStateQueue = []);  queue.push(partialState);  //  enqueueUpdate 用来处理当前的组件实例  enqueueUpdate(internalInstance);}</code></pre><p>enqueueSetState大致做了两件事：</p><ul><li>将新的state放入组件状态队列里</li><li>用enqueueUpdate来处理将要更新的实例对象</li></ul><p>我们在去enqueueUpdate里面看看做什么事情</p><pre><code class="javascript">function enqueueUpdate(component) {  ensureInjected();  // 注意这一句是问题的关键，isBatchingUpdates标识着当前是否处于批量创建/更新组件的阶段  if (!batchingStrategy.isBatchingUpdates) {    // 若当前没有处于批量创建/更新组件的阶段，则立即更新组件    batchingStrategy.batchedUpdates(enqueueUpdate, component);    return;  }  // 否则，先把组件塞入 dirtyComponents 队列里，让它“再等等”  dirtyComponents.push(component);  if (component._updateBatchNumber == null) {    component._updateBatchNumber = updateBatchNumber + 1;  }}</code></pre><p>通过源码，我们看到enqueueUpdate中引入了一个关键对象—batchingStrategy。<br>该对象具备isBatchingUpdates属性，直接决定了当下要走的更新流程，还是排队等待。其中的batchedUpdates 方法更是能够直接发起更新流程。<br>由此我们可以看出：batchingStrategy 或许正是 React 内部专门用于管控批量更新的对象。</p><p>下面我们去看看batchingStrategy这个关键的对象</p><pre><code class="javascript">/** * batchingStrategy源码**/var ReactDefaultBatchingStrategy = {  // 全局唯一的锁标识  isBatchingUpdates: false,  // 发起更新动作的方法  batchedUpdates: function(callback, a, b, c, d, e) {    // 缓存锁变量    var alreadyBatchingStrategy = ReactDefaultBatchingStrategy.isBatchingUpdates;    // 把锁“锁上”    ReactDefaultBatchingStrategy.isBatchingUpdates = true;    if (alreadyBatchingStrategy) {      callback(a, b, c, d, e);    } else {      // 启动事务，将 callback 放进事务里执行      transaction.perform(callback, null, a, b, c, d, e);    }  }}</code></pre><p>batchingStrategy 对象并不复杂，你可以理解为它是一个“锁管理器”。</p><p>这里的“锁”，是指 React 全局唯一的 isBatchingUpdates 变量，isBatchingUpdates 的初始值是 false，意味着“当前并未进行任何批量更新操作”。每当 React 调用 batchedUpdate 去执行更新动作时，会先把这个锁给“锁上”（置为 true），表明“现在正处于批量更新过程中”。当锁被“锁上”的时候，任何需要更新的组件都只能暂时进入 dirtyComponents 里排队等候下一次的批量更新，而不能随意“插队”。此处体现的“任务锁”的思想，是 React 面对大量状态仍然能够实现有序分批处理的基石。</p><p>在batchingStrategy中引入了一个硬核的东西</p><pre><code class="javascript">    transaction.perform(callback, null, a, b, c, d, e);</code></pre><p>这行代码为我们引出了一个更为硬核的概念——React 中的 Transaction（事务）机制。</p><h2 id="理解-React-中的-Transaction（事务）-机制"><a href="#理解-React-中的-Transaction（事务）-机制" class="headerlink" title="理解 React 中的 Transaction（事务） 机制"></a>理解 React 中的 Transaction（事务） 机制</h2><p>Transaction 在 React 源码中的分布可以说非常广泛。如果你在 Debug React 项目的过程中，发现函数调用栈中出现了 initialize、perform、close、closeAll 或者 notifyAll 这样的方法名，那么很可能你当前就处于一个 Trasaction 中。<br>Transaction 在 React 源码中表现为一个核心类，React 官方曾经这样描述它：<strong>Transaction 是创建一个黑盒，该黑盒能够封装任何的方法。</strong>因此，那些需要在函数运行前、后运行的方法可以通过此方法封装（即使函数运行中有异常抛出，这些固定的方法仍可运行），实例化 Transaction 时只需提供相关的方法即可。<br>下面是源码中的一段针对 Transaction 的注释：</p><pre><code class="javascript">* &lt;pre&gt; *                       wrappers (injected at creation time) *                                      +        + *                                      |        | *                    +-----------------|--------|--------------+ *                    |                 v        |              | *                    |      +---------------+   |              | *                    |   +--|    wrapper1   |---|----+         | *                    |   |  +---------------+   v    |         | *                    |   |          +-------------+  |         | *                    |   |     +----|   wrapper2  |--------+   | *                    |   |     |    +-------------+  |     |   | *                    |   |     |                     |     |   | *                    |   v     v                     v     v   | wrapper *                    | +---+ +---+   +---------+   +---+ +---+ | invariants * perform(anyMethod) | |   | |   |   |         |   |   | |   | | maintained * +-----------------&gt;|-|---|-|---|--&gt;|anyMethod|---|---|-|---|-|--------&gt; *                    | |   | |   |   |         |   |   | |   | | *                    | |   | |   |   |         |   |   | |   | | *                    | |   | |   |   |         |   |   | |   | | *                    | +---+ +---+   +---------+   +---+ +---+ | *                    |  initialize                    close    | *                    +-----------------------------------------+ * &lt;/pre&gt;</code></pre><p>说白了，Transaction 就像是一个“壳子”，它首先会将目标函数用 wrapper（一组 initialize 及 close 方法称为一个 wrapper） 封装起来，同时需要使用 Transaction 类暴露的 perform 方法去执行它。如上面的注释所示，在 anyMethod 执行之前，perform 会先执行所有 wrapper 的 initialize 方法，执行完后，再执行所有 wrapper 的 close 方法。这就是 React 中的事务机制。</p><h2 id="“同步现象”的本质"><a href="#“同步现象”的本质" class="headerlink" title="“同步现象”的本质"></a>“同步现象”的本质</h2><p>通过对事务的理解，ReactDefaultBatchingStrategy 其实就是一个批量更新策略事务，它的 wrapper 有两个：FLUSH_BATCHED_UPDATES 和 RESET_BATCHED_UPDATES。</p><pre><code class="javascript">var RESET_BATCHED_UPDATES = {  initialize: emptyFunction,  close: function () {    ReactDefaultBatchingStrategy.isBatchingUpdates = false;  }};var FLUSH_BATCHED_UPDATES = {  initialize: emptyFunction,  close: ReactUpdates.flushBatchedUpdates.bind(ReactUpdates)};var TRANSACTION_WRAPPERS = [FLUSH_BATCHED_UPDATES, RESET_BATCHED_UPDATES];</code></pre><p>我们将这两个wrapper套入上面注释中去，不难得出这样的流程：<br>在callback执行完成后RESET_BATCHED_UPDATES将isBatchingUpdates修改为false，FLUSH_BATCHED_UPDATES执行flushBatchedUpdates，然后里面会循环所有的dirtyComponents,调用updateComponent来执行所有的生命周期方法。componentWillReceiveProps &gt; shouldComponentUpdate &gt; componentWillUpdate &gt; componentDidUpdate。 最后实现组件的更新。</p><p>其实batchingUpdates在很多地方都有调用，例如在首次渲染的时候：</p><pre><code class="javascript">// ReactMount.js_renderNewRootComponent: function( nextElement, container, shouldReuseMarkup, context ) {  // 实例化组件  var componentInstance = instantiateReactComponent(nextElement);  // 初始渲染直接调用 batchedUpdates 进行同步渲染  ReactUpdates.batchedUpdates(    batchedMountComponentIntoNode,    componentInstance,    container,    shouldReuseMarkup,    context  );  ...}</code></pre><p>这段代码是在首次渲染组件时会执行的一个方法，我们看到它内部调用了一次 batchedUpdates，这是因为在组件的渲染过程中，会按照顺序调用各个生命周期函数。开发者很有可能在声明周期函数中调用 setState。因此，我们需要通过开启 batch 来确保所有的更新都能够进入 dirtyComponents 里去，进而确保初始渲染流程中所有的 setState 都是生效的。</p><p>下面代码是 React 事件系统的一部分。当我们在组件上绑定了事件之后，事件中也有可能会触发 setState。为了确保每一次 setState 都有效，React 同样会在此处手动开启批量更新。</p><pre><code class="javascript">// ReactEventListener.jsdispatchEvent: function (topLevelType, nativeEvent) {  ...  try {    // 处理事件    ReactUpdates.batchedUpdates(handleTopLevelImpl, bookKeeping);  } finally {    TopLevelCallbackBookKeeping.release(bookKeeping);  }}</code></pre><p>可以看出isBatchingUpdates 这个变量，在 React 的生命周期函数以及合成事件执行前，已经被 React 悄悄修改为了 true，这时我们所做的 setState 操作自然不会立即生效。当函数执行完毕后，事务的 close 方法会再把 isBatchingUpdates 改为 false。</p><p>我们都是知道setTimeout是异步执行的，它内部是完全没有约束的，而isBatchingUpdates又是在同步的修改，当setTimeout中的setState执行时，isBatchingUpdates早就被修改为了false。也就是我们之前说的逃离了react的管控，也就出现了同步更新的现象。<br><strong style="color:red;">setState 并不是具备同步这种特性，只是在特定的情境下，它会从 React 的异步管控中“逃脱”掉。</strong></p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>react</tag>
+      
+      <tag>深入理解react</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>React虚拟Dom的理解</title>
+    <link href="/2021/03/23/React%E8%99%9A%E6%8B%9FDom%E7%9A%84%E7%90%86%E8%A7%A3/"/>
+    <url>/2021/03/23/React%E8%99%9A%E6%8B%9FDom%E7%9A%84%E7%90%86%E8%A7%A3/</url>
+    
+    <content type="html"><![CDATA[<p><img src="http://img.kuagra.top/wallhaven-y8x95d_1920x1080.png" srcset="/img/loading.gif" alt=""></p><h1 id="React虚拟Dom的理解"><a href="#React虚拟Dom的理解" class="headerlink" title="React虚拟Dom的理解"></a>React虚拟Dom的理解</h1><h2 id="什么是React虚拟Dom"><a href="#什么是React虚拟Dom" class="headerlink" title="什么是React虚拟Dom"></a>什么是React虚拟Dom</h2><p>虚拟Dom是对真实Dom的一种映射，也就是虚拟Dom是真实Dom的另一种表现形式。<br>react虚拟Dom是js对象，react虚拟Dom是对真实Dom的一种描述，本质上是JS和Dom之间的一个映射缓存。</p><h2 id="React生成虚拟Dom到界面的大致过程"><a href="#React生成虚拟Dom到界面的大致过程" class="headerlink" title="React生成虚拟Dom到界面的大致过程"></a>React生成虚拟Dom到界面的大致过程</h2><p>在挂载阶段：React将结合jsx描述构建出虚拟Dom树，然后通过ReactDom.render实现虚拟Dom树到真实Dom树的映射，触发渲染流程。<br>在更新阶段：页面的变化在作用于真实Dom之前会先作用于虚拟Dom，虚拟Dom将在js层借助算法先对比出具体有那些真实Dom需要被改变，然后在将这些改变作用于真实Dom。</p><h2 id="React选用虚拟Dom真的是解决性能吗"><a href="#React选用虚拟Dom真的是解决性能吗" class="headerlink" title="React选用虚拟Dom真的是解决性能吗"></a>React选用虚拟Dom真的是解决性能吗</h2><p>我觉得性能问题不能一概而论，性能问题决定的因素很多。<br>虚拟Dom真正的作用在于提高了(开发体验/开发效率)，虚拟Dom能为我们做更多的事情。jsx形式的语法糖很适用前端的开发人，它和HTML语法很相似，但又完全不同。jsx也就是我们对虚拟Dom的另一种表达方式。<br>使用虚拟Dom我们可以实现一次编译多端运行；例如我们可以通过虚拟Dom编译生成网页，小程序，IOS应用，Android应用等。大大的提高了我们开发效率，满足了丰富的应用交互效果。</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>react</tag>
+      
+      <tag>深入理解react</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>前端查看已安装的依赖包</title>
+    <link href="/2021/03/22/%E5%89%8D%E7%AB%AF%E6%9F%A5%E7%9C%8B%E5%B7%B2%E5%AE%89%E8%A3%85%E7%9A%84%E4%BE%9D%E8%B5%96%E5%8C%85/"/>
+    <url>/2021/03/22/%E5%89%8D%E7%AB%AF%E6%9F%A5%E7%9C%8B%E5%B7%B2%E5%AE%89%E8%A3%85%E7%9A%84%E4%BE%9D%E8%B5%96%E5%8C%85/</url>
+    
+    <content type="html"><![CDATA[<h1 id="使用yarn查看已安装的依赖包"><a href="#使用yarn查看已安装的依赖包" class="headerlink" title="使用yarn查看已安装的依赖包"></a>使用yarn查看已安装的依赖包</h1><h2 id="查看当前目录下已安装的依赖包"><a href="#查看当前目录下已安装的依赖包" class="headerlink" title="查看当前目录下已安装的依赖包"></a>查看当前目录下已安装的依赖包</h2><pre><code class="javascript">npm list --depth 0 yarn list --depth=0</code></pre><h2 id="全局下已安装的依赖包"><a href="#全局下已安装的依赖包" class="headerlink" title="全局下已安装的依赖包"></a>全局下已安装的依赖包</h2><pre><code class="javascript">npm list -g --depth 0 yarn global list --depth=0</code></pre><p>对于不常用的命令还是想要记录一下。</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>工作记录</tag>
+      
+      <tag>yarn使用</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>前端二进制流文件的下载</title>
+    <link href="/2021/03/22/%E5%89%8D%E7%AB%AF%E4%BA%8C%E8%BF%9B%E5%88%B6%E6%B5%81%E6%96%87%E4%BB%B6%E7%9A%84%E4%B8%8B%E8%BD%BD/"/>
+    <url>/2021/03/22/%E5%89%8D%E7%AB%AF%E4%BA%8C%E8%BF%9B%E5%88%B6%E6%B5%81%E6%96%87%E4%BB%B6%E7%9A%84%E4%B8%8B%E8%BD%BD/</url>
+    
+    <content type="html"><![CDATA[<h1 id="前端二进制流文件的下载"><a href="#前端二进制流文件的下载" class="headerlink" title="前端二进制流文件的下载"></a>前端二进制流文件的下载</h1><p>前端下载文件一般是通过链接URI直接定位到具体的资源文件上。<br>但有时，这种方式是有局限性，链接的形式方式，也就是说这个文件是公开的，任何人都是可以访问并下载，一般来说后端会对下载的地址设置有效时间。<br>下面这种方式可以很好的实现流文件的下载，但是是确定具体的文件格式或通过其他方式能确定格式的情况下。</p><pre><code class="javascript">const disposition = res.headers[&#39;content-disposition&#39;];// fileName 中应包含文件格式let fileName = disposition.substring(    disposition.indexOf(&#39;filename=&#39;) + 9,    disposition.length,);// iso8859-1的字符转换成中文fileName = decodeURI(escape(fileName));// 文件流转换为Blob对象const blob = new Blob([res.data], { type: &#39;application/octet-stream;&#39; });// 创建下载链接const objectUrl = window.URL.createObjectURL(blob);const link = document.createElement(&#39;a&#39;);link.href = objectUrl;link.download = fileName;// link.click();// 下面这个写法兼容火狐link.dispatchEvent(    new MouseEvent(&#39;click&#39;, { bubbles: true, cancelable: true, view: window }),);// 释放掉objectUrl对象window.URL.revokeObjectURL(objectUrl);</code></pre><p>这种方式如果文件过大，可能会出现内存溢出的问题。<br>它是直接将流存在内存中，最后转成objectUrl形式进行下载，太大的文件无法适用。</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>工作记录</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>英语学习规划</title>
+    <link href="/2020/12/30/%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0%E8%A7%84%E5%88%92/"/>
+    <url>/2020/12/30/%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0%E8%A7%84%E5%88%92/</url>
+    
+    <content type="html"><![CDATA[<p>随着我的自考即将结束，但我又想拿到学位证，故给自己制定了如下的规划。<br>希望自己能坚持下来，当然这也是我的挑战。</p><h2 id="规划"><a href="#规划" class="headerlink" title="规划"></a>规划</h2><p>1、每天早上花10分钟记单词（50个），越早越好，但是我可能起不来。（脑子里记到就过，不能纠结，配合使用墨墨背单词）<br>2、每周六找一视频学习语法，尽量提前找好，（时间控制在一小时，专注一小时，暂定b站四级水平查找）<br>3、每周天做一套试卷，（时间控制在两小时，半小时回顾错题，直接到统考网模拟考试）</p><p>任务不可安排太多，学习是加深印象的过程，坚持最重要。</p><h2 id="说说我的坏毛病吧"><a href="#说说我的坏毛病吧" class="headerlink" title="说说我的坏毛病吧"></a>说说我的坏毛病吧</h2><p>1、每天在家上厕所能待一小时，玩手机。<br>2、同样是玩手机，我能在客厅玩很久。<br>3、脑子里有股惰性，喜欢逃避学习。</p><h2 id="如何改变"><a href="#如何改变" class="headerlink" title="如何改变"></a>如何改变</h2><p>1、给自己安排上日程，由时间提醒这我走，很多时候是自己忘记了接下来要干嘛。<br>2、将手机上所有的推送关掉，很多时候我只是想看一下微信，结果很容易引导到其他软件上。<br>3、给自己设定一个休息时间，不然会觉得生活很无趣。<br>4、干掉惰性，设置座右铭时刻提醒自己，<br>一些不是很重要但是又必须要做的重复性事情要尽量想办法用其他的方式替代，给自己争取更多的时间。</p><p>目前就安排这些，看自己能否坚持下来，后续有变动在更新</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>英语</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>一次bug记录</title>
+    <link href="/2020/12/26/%E4%B8%80%E6%AC%A1bug%E8%AE%B0%E5%BD%95/"/>
+    <url>/2020/12/26/%E4%B8%80%E6%AC%A1bug%E8%AE%B0%E5%BD%95/</url>
+    
+    <content type="html"><![CDATA[<p>今天周六，天气一般（阴）。<br>刚开始不知道写啥，突然想起上周工作时遇到的一个bug，觉得有点意思，想记录一下。<br>事情是这样的。<br>那天我还在悠闲的看着代码，然后啪，测试给我同事来了个bug，然后在他分析后找到我，说是我的bug。<br>看了现象确实是我写的模块，但总觉得是后面出现的问题，深信不疑的我开始看代码分析。<br>最终发现了问题所在，并顺利解决了问题。</p><p>问题是这样出现的</p><p>我写了一个类似于这样的组件</p><pre><code class="javascript">const EditInfo = (props) =&gt; {    /*...*/    const cancel = React.useCallback(()=&gt;{        /*...*/        props.cancel();    },[]);    return &lt;div&gt;        &lt;Button            onClick={cancel}        &gt;点击&lt;/Button&gt;    &lt;/div&gt;}</code></pre><p>然后组件在其他地方是这样使用的</p><pre><code class="javascript">const [selectedKey,setSelectedKey] = useState();// 设置selectKeyconst changeKey = (key) =&gt; {    // 重新设置key    setSelectedKey(key);}&lt;EditInfo    cancel={()=&gt;{        /*这里从上下环境取一值为selectedKey*/        changeKey(selectedKey);    }}/&gt;</code></pre><p>就是这样在我的组件里面第一次编辑成功后没有任何问题，<br>在第二次编辑的时候在次改变selectedKey的值时，此时的值为上一次的值，<br>就是这样出现的很神奇。</p><p>为什么会出现这样呢？</p><p>在页面组件分析完后并没有什么问题，我开始怀疑是我组件的问题，<br>这个时候我开始查看组件代码，最开始就定位点击后发生了什么，我一眼就发现了不对劲的地方。</p><pre><code class="javascript">const cancel = React.useCallback(() =&gt; {        /*...*/        props.cancel();    },[]);</code></pre><p>这里函数写的有问题，如果外部改变了传入的cancel方法，那这里执行的还是之前传入的cancel方法。<br>那么在之前的cancel方法中获取的是之前的selectedKey，也就是为啥每次点击后取到的值都是最开始传入的值。</p><p>解决办法，将组件中的cancel方法进行如下重写</p><pre><code class="javascript">const cancel = React.useCallback(() =&gt; {    /*...*/    props.cancel();},[props.cancel]);</code></pre><p>总结:<br>解决后，我陷入了反思，当时为啥没有把这个加上，按正常的开发是必须要加上的。<br>可能当时并没有真正掌握ReactHook的魔法吧。</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>工作记录</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>英语学习收藏</title>
+    <link href="/2020/12/15/%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0%E6%94%B6%E8%97%8F/"/>
+    <url>/2020/12/15/%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0%E6%94%B6%E8%97%8F/</url>
+    
+    <content type="html"><![CDATA[<h2 id="最近收藏英语学习相关"><a href="#最近收藏英语学习相关" class="headerlink" title="最近收藏英语学习相关"></a>最近收藏英语学习相关</h2><p>我将持续更新最新的学习方法</p><h3 id="知乎"><a href="#知乎" class="headerlink" title="知乎"></a>知乎</h3><p><a href="https://www.zhihu.com/question/20896608" target="_blank" rel="noopener">https://www.zhihu.com/question/20896608</a></p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>英语</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>今日见闻-20200919</title>
+    <link href="/2020/09/19/2020-9-19/"/>
+    <url>/2020/09/19/2020-9-19/</url>
+    
+    <content type="html"><![CDATA[<p><img src="http://img.kuagra.top/pizza-20200919.jpg" srcset="/img/loading.gif" alt="alt 披萨"></p><h1 id="今日见闻"><a href="#今日见闻" class="headerlink" title="今日见闻"></a>今日见闻</h1><h2 id="呆在必胜客的时光"><a href="#呆在必胜客的时光" class="headerlink" title="呆在必胜客的时光"></a>呆在必胜客的时光</h2><p>女朋友今天上班，想着不如就在附近找家店呆一会，于是我看中了必胜客。为啥？ 因为可以上网，还有充电的地方，哈哈哈😂。虽然今天呆在必胜客没有任何的花费，但确让我有了很多的思考。我才能有时间静下来写写博文。<br>下午吃过饭来到了这里，选择了一个空旷的位置，没过一会这里的经理过来和我说一会有人要在这里上课叫我换一个位置。终于坐下了，发现真的有一个外教在这里教课，也就是为啥我来的时候发现大部分就餐的人都是带着小孩的，吃完饭就可以去听课，我也静静的听了一会，发现挺有意思的，教的都是小朋友可以接受的词汇，日常词汇。这个外教应该也是背后外国语学校的老师吧。刚开始还觉得小孩还这么小学习英文能行吗？或许还真行。在我看到大部分小朋友都能说出许多得词汇，虽然发音不标准。<br>我忽略了大部分家长对与孩子教育的渴望，为了让孩子接受到好的教育尽可能的会选择一些好的（贵族）私立学校，这样的学校很多，而我现在遇到的这所学校听说是可以保送到国外读书的。这种对于大部分家长来说绝对有很大的吸引力。<br>好吧，大部分人都在努力着，我也没有理由太沮丧，都不容易啊。</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>生活</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>工作中常见的git命令</title>
+    <link href="/2020/09/19/%E5%B7%A5%E4%BD%9C%E4%B8%AD%E5%B8%B8%E8%A7%81%E7%9A%84git%E5%91%BD%E4%BB%A4/"/>
+    <url>/2020/09/19/%E5%B7%A5%E4%BD%9C%E4%B8%AD%E5%B8%B8%E8%A7%81%E7%9A%84git%E5%91%BD%E4%BB%A4/</url>
+    
+    <content type="html"><![CDATA[<p>最近由于工作的原因对git命令有了新的认识，今天想全部总结一下，也算是做个笔记，后期有新的见解又继续添加。<br>终于又更新了一部分了，希望这些对自己有用。</p><h1 id="基本认识"><a href="#基本认识" class="headerlink" title="基本认识"></a>基本认识</h1><h2 id="拉取项目"><a href="#拉取项目" class="headerlink" title="拉取项目"></a>拉取项目</h2><pre><code class="git">    git clone [url,ssh]</code></pre><h2 id="git-init-初始化一个仓库"><a href="#git-init-初始化一个仓库" class="headerlink" title="git init 初始化一个仓库"></a>git init 初始化一个仓库</h2><pre><code class="git">$ mkdir git-tutorial$ cd git-tutorial$ git initInitialized empty Git repository in /Users/hirocaster/github/github-book/git-tutorial/.git/</code></pre><h2 id="git-add-向暂存区添加文件"><a href="#git-add-向暂存区添加文件" class="headerlink" title="git add 向暂存区添加文件"></a>git add 向暂存区添加文件</h2><pre><code class="git">    git add README.md</code></pre><h2 id="提交暂存区到本地仓库区"><a href="#提交暂存区到本地仓库区" class="headerlink" title="提交暂存区到本地仓库区"></a>提交暂存区到本地仓库区</h2><pre><code class="git">    git commit -m [message]    // 如果需要详细的描述可不加 -m ，之后弹出编辑框编辑后保存提交</code></pre><h2 id="git-log-查看提交的日志信息"><a href="#git-log-查看提交的日志信息" class="headerlink" title="git log 查看提交的日志信息"></a>git log 查看提交的日志信息</h2><pre><code class="git">    git log    // 想要只显示提交的描述，在log后加上 --pretty=short    // 想要查看提交的文件改动为： git log -p 默认为查看所有改动    // 查看指定文件改动日志：git log -p README.md</code></pre><h2 id="git-diff-查看更改前后的差别"><a href="#git-diff-查看更改前后的差别" class="headerlink" title="git diff 查看更改前后的差别"></a>git diff 查看更改前后的差别</h2><pre><code class="git">    git diff 默认查看当前树和(暂存区,最新提交状态)的差别    git diff HEAD 查看当前提交于上次提交的差别</code></pre><h2 id="查看修改文件状态"><a href="#查看修改文件状态" class="headerlink" title="查看修改文件状态"></a>查看修改文件状态</h2><pre><code class="git">    git status</code></pre><h2 id="查看所有分支"><a href="#查看所有分支" class="headerlink" title="查看所有分支"></a>查看所有分支</h2><pre><code class="git">    git branch -a</code></pre><h2 id="创建一个新分支并切换到改该分支"><a href="#创建一个新分支并切换到改该分支" class="headerlink" title="创建一个新分支并切换到改该分支"></a>创建一个新分支并切换到改该分支</h2><pre><code class="git">    git checkout -b [branch name]</code></pre><h2 id="切换分支"><a href="#切换分支" class="headerlink" title="切换分支"></a>切换分支</h2><pre><code class="git">    git checkout [branch name]</code></pre><h2 id="拉取远程仓库代码并与本地分支合并"><a href="#拉取远程仓库代码并与本地分支合并" class="headerlink" title="拉取远程仓库代码并与本地分支合并"></a>拉取远程仓库代码并与本地分支合并</h2><pre><code class="git">    git pull [remote] [branch]</code></pre><h2 id="上传本地指定分支到远程仓库"><a href="#上传本地指定分支到远程仓库" class="headerlink" title="上传本地指定分支到远程仓库"></a>上传本地指定分支到远程仓库</h2><pre><code class="git">    git push [remote] [branch]</code></pre><h2 id="删除本地分支"><a href="#删除本地分支" class="headerlink" title="删除本地分支"></a>删除本地分支</h2><pre><code class="git">    git branch -d [branch name]</code></pre><h2 id="删除远程仓库分支-分支名前的冒号表示删除"><a href="#删除远程仓库分支-分支名前的冒号表示删除" class="headerlink" title="删除远程仓库分支(分支名前的冒号表示删除)"></a>删除远程仓库分支(分支名前的冒号表示删除)</h2><pre><code class="git">    git push origin :branchName </code></pre><h2 id="查看本地已添加的远程仓库"><a href="#查看本地已添加的远程仓库" class="headerlink" title="查看本地已添加的远程仓库"></a>查看本地已添加的远程仓库</h2><pre><code class="git">    git remote show</code></pre><h2 id="查看指定的本地关联的远程仓库remote地址，远程分支，还有本地分支与之相对应关系"><a href="#查看指定的本地关联的远程仓库remote地址，远程分支，还有本地分支与之相对应关系" class="headerlink" title="查看指定的本地关联的远程仓库remote地址，远程分支，还有本地分支与之相对应关系"></a>查看指定的本地关联的远程仓库remote地址，远程分支，还有本地分支与之相对应关系</h2><pre><code class="git">    git remote show [origin]</code></pre><h2 id="与指定远程仓库分支比较，删除本地多余的分支"><a href="#与指定远程仓库分支比较，删除本地多余的分支" class="headerlink" title="与指定远程仓库分支比较，删除本地多余的分支"></a>与指定远程仓库分支比较，删除本地多余的分支</h2><pre><code class="git">    git remote prune [origin]</code></pre><h1 id="进阶魔法"><a href="#进阶魔法" class="headerlink" title="进阶魔法"></a>进阶魔法</h1><h2 id="git-marge-合并分支"><a href="#git-marge-合并分支" class="headerlink" title="git marge 合并分支"></a><font style="background:yellow">git marge</font> 合并分支</h2><pre><code class="git">    // 我们首先切换到master分支，    git checkout master    // 然后我们在将feature/A 分支合并到master分支    git marge --no-ff feature/A    // 注意这里为了明确本次合并记录需要加上--no-ff 随后会出现编辑器编辑完成保存提交就完成啦</code></pre><h2 id="git-log-–graph-以图表的形式查看分支"><a href="#git-log-–graph-以图表的形式查看分支" class="headerlink" title="git log –graph 以图表的形式查看分支"></a><font style="background:yellow">git log –graph</font> 以图表的形式查看分支</h2><p>以图表的形式输出更清晰，务必记住该命令</p><pre><code class="git">    git log --graph    * commit 83b0b94268675cb715ac6c8a5bc1965938c15f62    |\ Merge: fd0cbf0 8a6c8b9    | | Author: hirocaster &lt;hohtsuka@gmail.com&gt;    | | Date: Sun May 5 16:37:57 2013 +0900    | |    | | Merge branch &#39;feature-A&#39;    | |    | * commit 8a6c8b97c8962cd44afb69c65f26d6e1a6c088d8    |/ Author: hirocaster &lt;hohtsuka@gmail.com&gt;    | Date: Sun May 5 16:22:02 2013 +0900    |    | Add feature/A    |    * commit fd0cbf0d4a25f747230694d95cac1be72d33441d    | Author: hirocaster &lt;hohtsuka@gmail.com&gt;    | Date: Sun May 5 16:10:15 2013 +0900    |    | Add index    |    * commit 9f129bae19b2c82fb4e98cde5890e52a6c546922    Author: hirocaster &lt;hohtsuka@gmail.com&gt;    Date: Sun May 5 16:06:49 2013 +0900    First commit</code></pre><h2 id="git-reset-回溯历史版本"><a href="#git-reset-回溯历史版本" class="headerlink" title="git reset 回溯历史版本"></a><font style="background:yellow">git reset</font> 回溯历史版本</h2><p>之前我们学习的都是完成功能后提交代码，git的另一特性就现的更灵活。那就是可回溯代码。<br>示例：在master之前合并了feature/A分支，我们想要回到合并之前的代码。<br>要完全恢复到之前的代码，我们需要拿到目标时间点的哈希值(即提交的commitId)</p><pre><code class="git">    git reset --hard fd0cbf0d4a25f747230694d95cac1be72d33441d</code></pre><h2 id="git-reflog-查看当前仓库执行过的操作的日志"><a href="#git-reflog-查看当前仓库执行过的操作的日志" class="headerlink" title="git reflog 查看当前仓库执行过的操作的日志"></a>git reflog 查看当前仓库执行过的操作的日志</h2><p>在日志中，我们可以看到 commit、checkout、reset、merge 等 Git 命<br>令的执行记录。只要不进行 Git 的 GC（Garbage Collection，垃圾回收），<br>就可以通过日志随意调取近期的历史状态，就像给时间机器指定一个时<br>间点，在过去未来中自由穿梭一般。</p><pre><code class="git">    git reflog</code></pre><h2 id="遇到冲突如何解决"><a href="#遇到冲突如何解决" class="headerlink" title="遇到冲突如何解决"></a>遇到冲突如何解决</h2><p>在我们执行git marge –no-ff feature/A 后，出现了冲突，<br>解决办法：我们打开编辑器，查看有冲突的地方，编辑后再次提交到feature/A分支，再次执行合并请求<br>冲突就解决了啦~。</p><h2 id="如果我们对上一次的提交描述不满意怎么办"><a href="#如果我们对上一次的提交描述不满意怎么办" class="headerlink" title="如果我们对上一次的提交描述不满意怎么办"></a>如果我们对上一次的提交描述不满意怎么办</h2><p>使用 git commit –amend<br>执行上面的命令后会出现编辑器，修改我们之前的描述，保存提交就可以啦~<br>使用 git log –graph 查看提交，修改就成功啦</p><h2 id="git-rebase-i-压缩历史提交"><a href="#git-rebase-i-压缩历史提交" class="headerlink" title="git rebase -i 压缩历史提交"></a>git rebase -i 压缩历史提交</h2><p>如果我们提交了两次代码到本地仓库，然后发现第一次提交的描述有错误的地方，我们可以这样做。<br>使用git rebase -i HEAD~2 命令<br>执行后会出现编辑器，显示如下</p><pre><code class="git">pick 7a34294 第二次提交描述pick 6fba227 第一次提交描述# Rebase 2e7db6f..6fba227 onto 2e7db6f## Commands:# p, pick = use commit# r, reword = use commit, but edit the commit message# e, edit = use commit, but stop for amending# s, squash = use commit, but meld into previous commit# f, fixup = like &quot;squash&quot;, but discard this commit&#39;s log message# x, exec = run command (the rest of the line) using shell## These lines can be re-ordered; they are executed from top to bottom.## If you remove a line here THAT COMMIT WILL BE LOST.## However, if you remove everything, the rebase will be aborted.## Note that empty commits are commented out</code></pre><p>我直接讲第一次描述 6fba227 压缩到第二次提交描述(7a34294)中，修改第一次描述提交(6fba227)前的（pick）为（fixup）.<br>保存并关闭编辑器，系统提示rebase成功，那压缩就完成啦~<br>我们在使用 git log –graph 查看，发现我们第二次提交的commitId已经发生了改变，而第一次提交则别完全抹除掉了。</p><h2 id="git-remote-add-添加远程仓库"><a href="#git-remote-add-添加远程仓库" class="headerlink" title="git remote add 添加远程仓库"></a>git remote add 添加远程仓库</h2><pre><code class="git">    git remote add origin [仓库地址]</code></pre>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>git</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>深入了解http</title>
+    <link href="/2020/02/05/http/"/>
+    <url>/2020/02/05/http/</url>
+    
+    <content type="html"><![CDATA[<p>作为一名web开发人员，http是每天都会和我们打交道的，今天就来深度学习下http的相关知识。我将从下面几个方面学习：<br>1、认识http；2、http的优缺点；3、http请求响应的过程；4、http请求特征；5、http报文；6、与http相关的组件；7、与http相关的协议；</p><h2 id="认识http"><a href="#认识http" class="headerlink" title="认识http"></a>认识http</h2><p>对http最常见的说法是：http是一种 <font color="#FF6A6A">超文本传输协议(Hypertext Transfer Protocol)</font>;文字拆分的也就是：超文本(Hypertext)、传输(Transfer)、协议(Protocol);他们之间的关系是这样的：按范围大小 协议 &gt; 传输 &gt; 超文本；下面分别对他们进行认识。</p><h3 id="什么是超文本"><a href="#什么是超文本" class="headerlink" title="什么是超文本"></a>什么是超文本</h3><p>早期我们的信息只能存储无法与其他电脑进行交互。我们保存的信息一般是以文本(简单字符)的形式存在，随着互联网的高速发展，两台电脑的数据实现传输后，人们开始不满足于两台电脑的文字传输，还想要实现图片、视频、音频，甚至是点击一个文字或图片能够进行<font color="#FF6A6A">超链接</font>的跳转，文本的语义就由此被扩大，这种语义被扩大后的文本就被称为<font color="#FF6A6A">超文本</font>.</p><h3 id="什么是传输"><a href="#什么是传输" class="headerlink" title="什么是传输"></a>什么是传输</h3><p>上面有说到两台电脑之间会形成互联关系进行通信；那我们将存储的超文本被解析成二进制数据包，由传输载体负责把二进制数据包从计算机终端传输到另一个终端的过程成为传输(Transfer).<br>通常我们将传输二进制数据包的一方称为<font color="#FF6A6A">请求方</font>，将接受二进制数据包的一方称为<font color="#FF6A6A">应答方</font>。请求方和接受方可以进行互换身份，请求方也可成为接受方，接受方也可成为请求方。</p><pre><code class="bash">            A                           B            |         A请求B            |            | ------------------------→ |            |         B响应A            |            | ←------------------------ |            |                           |            |         B请求A            |            | ←------------------------ |            |         A响应B            |            | ------------------------→ |            |                           |            ↓                           ↓</code></pre><h3 id="什么是协议"><a href="#什么是协议" class="headerlink" title="什么是协议"></a>什么是协议</h3><p>协议并不是只存在于互联网范畴，也体现在日常生活中，比如情侣双方约定好在那里吃饭，这也是一种协议，比如你应聘成功了，企业会和你签订劳动合同，这种双方的雇佣关系也是一种协议。自己一个人对自己的约定不能算是协议，协议的前提条件是必须多人约定。</p><p>那么网络协议是什么呢？</p><p>网络协议就是网络中（互联网）传递、管理信息的一些规范。如同人与人之间交流也应该遵循一定规矩一样。计算机之间也同样应该共同遵循一定的规则，这些规则就成为网络协议。</p><p>总结一下：http是一个在计算机世界里专门在两点之间传输文字、图片、音频、视频等超文本数据的约定和规范。</p><h2 id="http的优缺点"><a href="#http的优缺点" class="headerlink" title="http的优缺点"></a>http的优缺点</h2><h3 id="http的优点"><a href="#http的优点" class="headerlink" title="http的优点"></a>http的优点</h3><p>简单灵活易扩展<br>Http最重要也是最突出的优点就是 <b>简单、灵活、易扩展</b>。<br>http的协议比较简单，它组要由header、body部分组成。头部信息也是简单的文本格式。在简单的基础上，Http协议又多了灵活和易扩展的优点。Http协议里面的请求方法、URI、状态码、原因短语、头字段等每个核心组成要素都没有限制死，允许开发者任意定制、扩充或解释，给予了浏览器和服务器最大的信任和自由。</p><h4 id="应用广泛，环境成熟。"><a href="#应用广泛，环境成熟。" class="headerlink" title="应用广泛，环境成熟。"></a>应用广泛，环境成熟。</h4><p>因为简单的特性，而被广泛的应用。Http并不是什么编程的语言，所以天然的具有跨平台、跨语言的优越性。<br>随着互联网的发展，Http已经延伸到了世界的每一个角落，从简单的web页面到复杂的JSON、XML数据，还有各种app上面、新闻、论坛、手机游戏等，应用非常之广泛。</p><h4 id="无状态"><a href="#无状态" class="headerlink" title="无状态"></a>无状态</h4><p>无状态其实既是优点也是缺点。因为服务器没有记忆能力，所以就不需要额外的资源来记录状态信息，不仅实现简单，还能减轻服务器的负担。</p><h3 id="http的缺点"><a href="#http的缺点" class="headerlink" title="http的缺点"></a>http的缺点</h3><h4 id="无状态-1"><a href="#无状态-1" class="headerlink" title="无状态"></a>无状态</h4><p>既然服务器没有记忆能力，它就无法支持需要连续多步骤的事务操作。每次都需问一次身份信息，不仅麻烦还增加了不必要的数据传输。为此出现了cookie技术，之后又延伸出session技术。</p><h4 id="明文"><a href="#明文" class="headerlink" title="明文"></a>明文</h4><p>Http协议里面还有一把优缺点一体的双刃剑，就是明文传输。明文就是协议里面的报文（header部分）不使用二进制数据，而是用简单可阅读的文本形式。<br>对比Tcp、Udp这样的二进制协议，它的优点显而易见，不需要借助任何外部工具，用浏览器、Wireshark或者tcpdump抓包后，直接就可以查看修改，为我们的开发调试工作带来了便利。<br>缺点也就显而易见了，能够被任意查看，带来的安全性大大降低。</p><h4 id="性能"><a href="#性能" class="headerlink" title="性能"></a>性能</h4><p>Http性能不是特别差，但不完全适应现在的互联网，还有很大的提升。</p><h2 id="http请求响应的过程"><a href="#http请求响应的过程" class="headerlink" title="http请求响应的过程"></a>http请求响应的过程</h2><p>请求响应的过程就如同用户从浏览器输入地址到之后发生一系列事件的一个过程。。<br>那我们在浏览器上输入地址后到底发生了什么呢？ 马上来学习下。<br>    1、DNS服务器会优先进行域名的映射，找到刚刚输入的地址，然后Http客户端相应端口（默认是80）发起一个到服务器的TCP连接请求。在客户与服务器进程中都有一个套接字与其相连。(这里相当于浏览器请求DNS服务器查询这个域名的IP地址，然后DNS返回这个域名的IP给到浏览器)<br>    2、Http客户端会通过这个套接字向服务端发起一个Http报文。这个报文就包含了请求路径，请求参数等。<br>    3、Http服务器通过这个套接字接受该报文，进行请求解析工作，并从其存储器中检索出资源，然后将检索出的资源封装，封装到Http的响应报文中，并通过套接字向客户端进行发送。<br>    4、Http服务器开始通知TCP断开连接，这时候TCP不会真的断开连接，开始等待客户端接受响应报文，然后TCP主动断开连接。<br>    5、Http客户端接受到来着服务端的报文后，提取里面的响应文件（html文件）并检查该文件，然后循环检查报文中其他内部对象。<br>    6、检查完成后会将html文件渲染到客户端呈现在用户面前。</p><h2 id="http请求特征"><a href="#http请求特征" class="headerlink" title="http请求特征"></a>http请求特征</h2><p>通过上面的响应过程可以发现有如下特征：<br>    1、支持客户-服务端模式<br>    2、简单快速：客户向服务器请求服务时，只需传送请求方法和路径。请求方法常用的有 GET、HEAD、POST。每种方法规定了客户与服务器联系的类型不同。由于 HTTP 协议简单，使得 HTTP 服务器的程序规模小，因而通信速度很快。<br>    3、灵活：HTTP 允许传输任意类型的数据对象。正在传输的类型由<font color="#FF6A6A"> Content-Type </font>加以标记。<br>    4、无连接：无连接的含义是限制每次连接只处理一个请求。服务器处理完客户的请求，并收到客户的应答后，即断开连接。采用这种方式可以节省传输时间。<br>    5、无状态：HTTP 协议是无状态协议。无状态是指协议对于事务处理没有记忆能力。缺少状态意味着如果后续处理需要前面的信息，则它必须重传，这样可能导致每次连接传送的数据量增大。另一方面，在服务器不需要先前信息时它的应答就较快。</p><h2 id="http报文"><a href="#http报文" class="headerlink" title="http报文"></a>http报文</h2><p>HTTP 协议主要由三大部分组成：<br>    1、起始行（start line）：描述请求或响应的基本信息；<br>    2、头部字段（header）：使用 key-value 形式更详细地说明报文；<br>    3、消息正文（entity）：实际传输的数据，它不一定是纯文本，可以是图片、视频等二进制数据；<br><br/><br>    其中起始行和头部字段并成为 请求头 或者 响应头，统称为 Header；消息正文也叫做实体，称为 body。HTTP 协议规定每次发送的报文必须要有 Header，但是可以没有 body，也就是说头信息是必须的，实体信息可以没有。而且在 header 和 body 之间必须要有一个空行（CRLF）</p><h2 id="与http相关的组件"><a href="#与http相关的组件" class="headerlink" title="与http相关的组件"></a>与http相关的组件</h2><h3 id="网络模型"><a href="#网络模型" class="headerlink" title="网络模型"></a>网络模型</h3><p>网络是一个复杂的系统，不仅包括大量的应用程序、端系统、通信链路、分组交换机等，还有各种各样的协议组成，那么现在我们就来聊一下网络中的协议层次。<br>为了给网络协议的设计提供一个结构，网络设计者以<font color="#FF6A6A">分层(layer)</font>的方式组织协议，每个协议属于层次模型之一。每一层都是向它的上一层提供<font color="#FF6A6A">服务(service)</font>，即所谓的<font color="#FF6A6A">服务模型(service model)</font>。每个分层中所有的协议称为<font color="#FF6A6A"> 协议栈(protocol stack)</font>。因特网的协议栈由五个部分组成：物理层、链路层、网络层、运输层和应用层。我们采用自上而下的方法研究其原理，也就是应用层 -&gt; 物理层的方式。</p><h4 id="应用层"><a href="#应用层" class="headerlink" title="应用层"></a>应用层</h4><p>应用层是网络应用程序和网络协议存放的分层，因特网的应用层包括许多协议，例如我们学 web 离不开的 HTTP，电子邮件传送协议 <font color="#FF6A6A">SMTP</font>、端系统文件上传协议 <font color="#FF6A6A">FTP</font>、还有为我们进行域名解析的 <font color="#FF6A6A">DNS </font>协议。应用层协议分布在多个端系统上，一个端系统应用程序与另外一个端系统应用程序交换信息分组，我们把位于应用层的信息分组称为<font color="#FF6A6A"> 报文(message)</font>。</p><h4 id="运输层"><a href="#运输层" class="headerlink" title="运输层"></a>运输层</h4><p>因特网的运输层在应用程序断点之间传送应用程序报文，在这一层主要有两种传输协议 <font color="#FF6A6A">TCP 和 UDP</font>，利用这两者中的任何一个都能够传输报文，不过这两种协议有巨大的不同。</p><p>TCP 向它的应用程序提供了面向连接的服务，它能够控制并确认报文是否到达，并提供了拥塞机制来控制网络传输，因此当网络拥塞时，会抑制其传输速率。<br>UDP 协议向它的应用程序提供了无连接服务。它不具备可靠性的特征，没有流量控制，也没有拥塞控制。我们把运输层的分组称为 报文段(segment)</p><h4 id="网络层"><a href="#网络层" class="headerlink" title="网络层"></a>网络层</h4><p>因特网的网络层负责将称为 <font color="#FF6A6A">数据报(datagram)</font> 的网络分层从一台主机移动到另一台主机。网络层一个非常重要的协议是 IP 协议，所有具有网络层的因特网组件都必须运行 IP 协议，IP 协议是一种网际协议，除了 IP 协议外，网络层还包括一些其他网际协议和路由选择协议，一般把网络层就称为 IP 层，由此可知 IP 协议的重要性。</p><h4 id="链路层"><a href="#链路层" class="headerlink" title="链路层"></a>链路层</h4><p>现在我们有应用程序通信的协议，有了给应用程序提供运输的协议，还有了用于约定发送位置的 IP 协议，那么如何才能真正的发送数据呢？为了将分组从一个节点（主机或路由器）运输到另一个节点，网络层必须依靠链路层提供服务。链路层的例子包括以太网、WiFi 和电缆接入的 <font color="#FF6A6A">DOCSIS 协议</font>，因为数据从源目的地传送通常需要经过几条链路，一个数据包可能被沿途不同的链路层协议处理，我们把链路层的分组称为 帧(frame)</p><h4 id="物理层"><a href="#物理层" class="headerlink" title="物理层"></a>物理层</h4><p>虽然链路层的作用是将帧从一个端系统运输到另一个端系统，而物理层的作用是将帧中的一个个 比特 从一个节点运输到另一个节点，物理层的协议仍然使用链路层协议，这些协议与实际的物理传输介质有关，例如，以太网有很多物理层协议：关于双绞铜线、关于同轴电缆、关于光纤等等。</p><h3 id="OSI模型"><a href="#OSI模型" class="headerlink" title="OSI模型"></a>OSI模型</h3><p>我们上面讨论的计算网络协议模型不是唯一的 协议栈，ISO（国际标准化组织）提出来计算机网络应该按照7层来组织，应用层-》表示层-》会话层-》运输层-》网络层-》链路层-》物理层<br>OSI 要比上面的网络模型多了 <font color="#FF6A6A">表示层</font> 和 <font color="#FF6A6A">会话层</font>，其他层基本一致。表示层主要包括数据压缩和数据加密以及数据描述，数据描述使得应用程序不必担心计算机内部存储格式的问题，而会话层提供了数据交换的定界和同步功能，包括建立检查点和恢复方案。</p><h3 id="CDN"><a href="#CDN" class="headerlink" title="CDN"></a>CDN</h3><p>CDN的全称是Content Delivery Network，即<font color="#FF6A6A">内容分发网络</font>，它应用了 HTTP 协议里的缓存和代理技术，代替源站响应客户端的请求。CDN 是构建在现有网络基础之上的网络，它依靠部署在各地的边缘服务器，通过中心平台的负载均衡、内容分发、调度等功能模块，使用户<font color="#FF6A6A">就近</font>获取所需内容，降低网络拥塞，提高用户访问响应速度和命中率。CDN的关键技术主要有<font color="#FF6A6A">内容存储和分发技术</font>。</p><h3 id="WAF"><a href="#WAF" class="headerlink" title="WAF"></a>WAF</h3><p>WAF 是一种 Web 应用程序防护系统（Web Application Firewall，简称 WAF），它是一种通过执行一系列针对HTTP / HTTPS的安全策略来专门为Web应用提供保护的一款产品，它是应用层面的<font color="#FF6A6A">防火墙</font>，专门检测 HTTP 流量，是防护 Web 应用的安全技术。</p><h3 id="浏览器"><a href="#浏览器" class="headerlink" title="浏览器"></a>浏览器</h3><h3 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h3><h2 id="与Http相关的协议"><a href="#与Http相关的协议" class="headerlink" title="与Http相关的协议"></a>与Http相关的协议</h2><h3 id="TCP-IP"><a href="#TCP-IP" class="headerlink" title="TCP/IP"></a>TCP/IP</h3><p>TCP/IP（Transmission Control Protocol/Internet Protocol，传输控制协议/网际协议）是指能够在多个不同网络间实现信息传输的协议簇。TCP/IP协议不仅仅指的是TCP 和IP两个协议，而是指一个由FTP、SMTP、TCP、UDP、IP等协议构成的协议簇， 只是因为在TCP/IP协议中TCP协议和IP协议最具代表性，所以被称为TCP/IP协议。</p><h3 id="DNS"><a href="#DNS" class="headerlink" title="DNS"></a>DNS</h3><p>域名系统（服务）协议（DNS）是一种分布式网络目录服务，主要用于域名与 IP 地址的相互转换，以及控制因特网的电子邮件的发送.</p><h3 id="URI-URL"><a href="#URI-URL" class="headerlink" title="URI/URL"></a>URI/URL</h3><p>URI的全称是（Uniform Resource Identifier），中文名称是统一资源标识符，使用它就能够唯一地标记互联网上资源。<br>URL的全称是（Uniform Resource Locator），中文名称是统一资源定位符，也就是我们俗称的网址，它实际上是 URI 的一个子集<br>URI 不仅包括 URL，还包括 URN（统一资源名称）</p><h3 id="Https"><a href="#Https" class="headerlink" title="Https"></a>Https</h3><p>HTTP 一般是明文传输，很容易被攻击者窃取重要信息，鉴于此，HTTPS 应运而生。HTTPS 的全称为 （Hyper Text Transfer Protocol over SecureSocket Layer），全称有点长，HTTPS 和 HTTP 有很大的不同在于 HTTPS 是以安全为目标的 HTTP 通道，在 HTTP 的基础上通过传输加密和身份认证保证了传输过程的安全性。HTTPS 在 HTTP 的基础上增加了 SSL 层，也就是说 HTTPS = HTTP + SSL</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>http</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>初衷</title>
+    <link href="/2019/12/05/initial/"/>
+    <url>/2019/12/05/initial/</url>
+    
+    <content type="html"><![CDATA[<p>终于把属于<a href="https://anlex-push.github.io">自己的博客</a>建好了，也是我第一次建博客，希望在新的一年能很好的提升自己的写作能力，同时记录自己的学习成长路线、一些经验等。希望在新的一年里能收获的更多。</p><h2 id="关于初衷"><a href="#关于初衷" class="headerlink" title="关于初衷"></a>关于初衷</h2><p>成立博客的初衷就是想要记录自己的生活、技术成长、其他能力提升，为更好的自己而奋斗。</p><h2 id="2019年简单总结"><a href="#2019年简单总结" class="headerlink" title="2019年简单总结"></a>2019年简单总结</h2><p>2019年收获了很多，收获和同事之间的友谊；收获了爱情，找到了那个她；技术上也得到了一些提升，很感谢同事对我的认可和帮助；2019年总的来说过的很“充实”，同时也发现了自己许多的不足。</p><h3 id="沟通能力上"><a href="#沟通能力上" class="headerlink" title="沟通能力上"></a>沟通能力上</h3><p>在工作中沟通往往是最重要的，有时get不到别人的意思是真的很着急。在一次和运营确定需求后，运营频繁更改需求，也就是出现了需求刚还是确定的很模糊，到了后面不断沟通才确定需求的细节。自己对需求可能也没有理解到；在项目开始之前就应获取到运营的需求文档并仔细阅读。</p><h3 id="技术能力"><a href="#技术能力" class="headerlink" title="技术能力"></a>技术能力</h3><p>在许多项目进行下来发现自己对react及js的知识开始有所遗忘，根本的原因还是在自身没有很好的巩固和复习。目前的项目框架版本过多，许多项目都用的不同版本，过多版本的代码切换有一点心累。对于Linux盒子的兼容问题还是要做一套服务端渲染的版本，但这个得一步一步的来，路漫漫其修远兮。。</p><h3 id="爱情"><a href="#爱情" class="headerlink" title="爱情"></a>爱情</h3><p>19年的8月10号认识了你，想起那时的你还是那么可爱，有时又有一点害羞，工作起来也是那么的可爱。和你相识也快有半年了，我真的想和你一直走下去，我知道前面肯定有许都阻碍，但我一定会努力。对于我的衣品是真的差，有了你之后开始注意到这一点，多一个人的关心，我真的很幸福。</p><h3 id="新的一年希望努力成为更好的自己"><a href="#新的一年希望努力成为更好的自己" class="headerlink" title="新的一年希望努力成为更好的自己"></a>新的一年希望努力成为更好的自己</h3><h2 id="新一年的规划"><a href="#新一年的规划" class="headerlink" title="新一年的规划"></a>新一年的规划</h2><p>今天的太阳很活泼，阳光照在脸上有一丝丝的暖意；中国加油！武汉加油！！</p><h3 id="技术提升"><a href="#技术提升" class="headerlink" title="技术提升"></a>技术提升</h3><p>前端的技术核心莫过于JavaScript;<br>1、每天阅读关于js的文章一篇（来源任何平台）。<br>2、每天练习一道js算法题。<br>3、了解一些关于react的一些新动向。<br>4、持之以恒，不要拖沓。</p><h3 id="沟通"><a href="#沟通" class="headerlink" title="沟通"></a>沟通</h3><p>磨练自己的心细，遇事不要太着急，仔细倾听别人是怎么说的，不懂的及时交流。性格也要努力改变，活泼开朗一点，多与人沟通。</p><h3 id="理财"><a href="#理财" class="headerlink" title="理财"></a>理财</h3><p>你不理财，财不理你！ 不知道在那里听到的这句话，但觉得还是有点道理。去年是真的没有存到什么钱，不知道钱都花到那里去了。是时候计划下理财了。<br>1、努力存钱，每个月定期存收入的50%。<br>2、每天投入10块到靠谱基金，合理分配自己的资产，及时止损。</p><h3 id="努力更新博客提升自己"><a href="#努力更新博客提升自己" class="headerlink" title="努力更新博客提升自己"></a>努力更新博客提升自己</h3>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>生活</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  
+</search>
