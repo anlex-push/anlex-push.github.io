@@ -1,0 +1,152 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><link rel="apple-touch-icon" sizes="76x76" href="/img/apple-touch-icon.png"><link rel="icon" type="image/png" href="/img/favicon.png"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,shrink-to-fit=no"><meta http-equiv="x-ua-compatible" content="ie=edge"><meta name="description" content=""><meta name="author" content="Anlex-Push"><meta name="keywords" content=""><title>最佳（中高级）前端面试题 ~ Anlex-Push</title><link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/5.10.2/css/all.min.css"><link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css"><link rel="stylesheet" href="https://cdn.staticfile.org/mdbootstrap/4.8.9/css/mdb.min.css"><link rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/3.0.1/github-markdown.min.css"><link rel="stylesheet" href="//at.alicdn.com/t/font_1067060_qzomjdt8bmp.css"><link rel="stylesheet" href="/lib/prettify/tomorrow-night-eighties.min.css"><link rel="stylesheet" href="/css/main.css"><link rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css"><meta name="generator" content="Hexo 4.2.0"></head><body><header style="height:70vh"><nav id="navbar" class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar"><div class="container"> <a class="navbar-brand" href="/">&nbsp;<strong>Anlex-Push</strong>&nbsp;</a> <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><div class="animated-icon"><span></span><span></span><span></span></div></button><div class="collapse navbar-collapse" id="navbarSupportedContent"><ul class="navbar-nav ml-auto text-center"><li class="nav-item"> <a class="nav-link" href="/">首页</a></li><li class="nav-item"> <a class="nav-link" href="/archives/">归档</a></li><li class="nav-item"> <a class="nav-link" href="/categories/">分类</a></li><li class="nav-item"> <a class="nav-link" href="/tags/">标签</a></li><li class="nav-item"> <a class="nav-link" href="/about/">关于</a></li><li class="nav-item" id="search-btn"> <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;&nbsp;<i class="iconfont icon-search"></i>&nbsp;&nbsp;</a></li></ul></div></div></nav><div class="view intro-2" id="background" style="background:url(/img/article.png) no-repeat center center;background-size:cover;background-attachment:fixed"><div class="full-bg-img"><div class="mask rgba-black-light flex-center"><div class="container text-center white-text fadeInUp"><span class="h2" id="subtitle"></span><br><p class="mt-3"><i class="fas fa-calendar-alt" aria-hidden="true"></i> &nbsp; 星期三, 五月 12日 2021, 10:16 上午</p><p> &nbsp;<i class="far fa-chart-bar"></i> <span class="post-count">2.8k 字</span> &nbsp; &nbsp;<i class="far fa-clock"></i> <span class="post-count">12 分钟</span> &nbsp; &nbsp;<i class="far fa-eye" aria-hidden="true"></i>&nbsp;<span id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv"></span> 次</span> &nbsp;</p></div></div></div></div></header><main><div class="container-fluid"><div class="row"><div class="d-none d-lg-block col-lg-2"></div><div class="col-lg-8 nopadding-md"><div class="py-5 z-depth-3" id="board"><div class="post-content mx-auto" id="post"><div class="markdown-body"><p>最佳（中高级）前端面试题（来自一个前端工程师）</p><h1>关于本文</h1> <b>本文偏向很多算法的内容，并不很适合前端的初学者。如果你有2-3年的开发经验，且希望向架构、全栈等方向发展，这篇文章会很适合你。 PS: 没有答案！ 这边篇文章是我在网上寻找面试题找到的，感觉自己好多都不会，想要记录一下，原文链接我会放在文末。</b><h1>前言</h1> 本文具体就是大神Boris Cherny根据自己面试别人和被别人面试的经验，整理一份清单。我们面别人也好别人面我们也好，都有一些总会被提及的问题。 下面提到的问题主要偏算法，不过很多公司都会关注你是否能写出高效的算法设计，比如一些大厂。 问题主要分为一下几类：<ul><li><a href="#概念">概念</a></li><li><a href="#编码">编码</a><ul><li><a href="#简单">简单</a></li><li><a href="#中级">中级</a></li><li><a href="#困难">困难</a></li></ul></li><li><a href="#改错">改错</a></li><li><a href="#系统设计">系统设计</a></li><li><a href="#更多资料">更多资料</a></li></ul><h1 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h1><p>请用清晰准确的语句解释如下名词（不需要编码）：</p><p>什么是“大O”符号，它被用来表示什么？</p><p>什么是DOM?</p><p>什么是时间循环？</p><p>什么是闭包？</p><p>原型继承是怎样的，如何工作，它和普通的继承有什么区别？(这个问题没啥意义，但很多面试官都爱问)</p><p>this 如何工作，代表什么?</p><p>什么是事件冒泡，它是如何工作的？（这也不是个好问题，同样的很多面试官很喜欢问。）</p><p>描述几种服务器和客户端之间的通信方式。描述一些网络协议是工作的（IP、TCP、http/S/2、UDP、RTC、DNS等）</p><p>REST是什么, 为什么使用它?</p><p>网页加载的很慢，诊断原因且修复它。如何进行性能优化，什么时候应该进行性能优化？</p><p>你用过什么前端框架？它们各有什么优缺点？为什么我们要使用框架？框架能为我们解决什么问题？</p><h1 id="编码"><a href="#编码" class="headerlink" title="编码"></a>编码</h1><p>实现以下功能：</p><h2 id="简单"><a href="#简单" class="headerlink" title="简单"></a>简单</h2><p>isPrime - 返回true或false, 表示输入的数是否为质数：</p><pre><code>isPrime(0)                          // false 
+isPrime(1)                          // false
+isPrime(17)                         // true
+isPrime(10000000000000)             // false</code></pre><p>factorial - 返回给定数的阶乘的值：</p><pre><code>factorial(0)                        // 1
+factorial(1)                        // 1
+factorial(6)                        // 720</code></pre><p>fib -返回斐波那契数列的前n项的和（n为给定） <a href="https://en.wikipedia.org/wiki/Fibonacci_number" target="_blank" rel="noopener">斐波那契数列</a>.</p><pre><code>fib(0)                              // 0
+fib(1)                              // 1
+fib(10)                             // 55
+fib(20)                             // 6765</code></pre><p>isSorted - 返回true或false，表示给定的数组是否被排序过：</p><pre><code>isSorted([])                        // true
+isSorted([-Infinity, -5, 0, 3, 9])  // true
+isSorted([3, 9, -3, 10])            // false</code></pre><p>filter - 实现过滤器功能.</p><pre><code>filter([1, 2, 3, 4], n =&gt; n &lt; 3)    // [1, 2]</code></pre><p>reduce- 实现reduce 函数.</p><pre><code>reduce([1, 2, 3, 4], (a, b) =&gt; a + b, 0) // 10</code></pre><p>reverse- 反转给定字符串 (用已封装好的 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse" target="_blank" rel="noopener">reverse</a> 是一个cheat，要自己实现).</p><pre><code>reverse(&#39;&#39;)                         // &#39;&#39;
+reverse(&#39;abcdef&#39;)                   // &#39;fedcba&#39;</code></pre><p>indexOf - 实现数组的 indexOf方法.</p><pre><code>indexOf([1, 2, 3], 1)               // 0
+indexOf([1, 2, 3], 4)               // -1</code></pre><p>isPalindrome - 返回true或false判断给定字符串是否是一个回文(palindrome)（大小写不敏感）</p><pre><code>isPalindrome(&#39;&#39;)                                // true
+isPalindrome(&#39;abcdcba&#39;)                         // true
+isPalindrome(&#39;abcd&#39;)                            // false
+isPalindrome(&#39;A man a plan a canal Panama&#39;)     // true</code></pre><p>missing - 一个数字1至n不重复且未排序过的数字组成的数组，从数字1至数字n选取出不重复且未排序过的数字组成数组（n为最大的数），调用方法后补全数组里缺失的数字。是否可以设计出时间复杂度为O(n)的算法？提示：有个聪明的方法供你使用。</p><pre><code>missing([])                         // undefined
+missing([1, 4, 3])                  // 2
+missing([2, 3, 4])                  // 1
+missing([5, 1, 4, 2])               // 3
+missing([1, 2, 3, 4])               // undefined</code></pre><p>isBalanced - 用true或false表示给定的字符串的花括号是否平衡（一一对应）</p><pre><code>isBalanced(&#39;}{&#39;)                      // false
+isBalanced(&#39;{{}')                     // false
+isBalanced('{}{}')                    // true
+isBalanced('foo { bar { baz } boo }') // true
+isBalanced('foo { bar { baz }')       // false
+isBalanced('foo { bar } }')           // false
+```
+
+## 中级
+fib2 - 实现像上面的fib函数一样的功能，但是要能够算出数列中前50位以上的数的和。(小提示: 从内存中查询).
+```
+fib2(0)                               // 0
+fib2(1)                               // 1
+fib2(10)                              // 55
+fib2(50)                              // 12586269025
+```
+
+isBalanced2 - 实现同上面的isBalanced函数相同的功能，但是要支持三种类型的括号{}，[]，和()。带有交错括号的字符串应该返回false。
+```
+isBalanced2('(foo { bar (baz) [boo] })') // true
+isBalanced2('foo { bar { baz }')         // false
+isBalanced2('foo { (bar [baz] } )')      // false
+```
+
+uniq - 选取一个由数字组成的数组，为其去重，返回去重后的数组。可以实现出时间复杂度为O(n)的算法吗？
+```
+uniq([])                              // []
+uniq([1, 4, 2, 2, 3, 4, 8])           // [1, 4, 2, 3, 8]
+```
+
+intersection - 算出两个数组的交集（公共部分）。可以实现时间复杂度为O(M+N)（M和N为两个数组的长度）的方法吗？
+```
+intersection([1, 5, 4, 2], [8, 91, 4, 1, 3])    // [4, 1]
+intersection([1, 5, 4, 2], [7, 12])             // []
+```
+
+sort -实现 sort 方法，用于排序元素为数字的数组， 且时间复杂度为O(N×log(N)).
+```
+sort([])                              // []
+sort([-4, 1, Infinity, 3, 3, 0])      // [-4, 0, 1, 3, 3, Infinity]
+```
+
+includes - 判断给定的数字是否出现在给定的已排列好的数组中，返回true或false。是否能设计出时间复杂度为O(log(N))的算法？
+```
+includes([1, 3, 8, 10], 8)            // true
+includes([1, 3, 8, 8, 15], 15)        // true
+includes([1, 3, 8, 10, 15], 9)        // false
+```
+
+assignDeep- 仿照 Object.assign, 但是要深度合并对象。为了简单起见，可以假设对象只包含数字或是什么别的（而不是数组、函数等）。
+```
+assignDeep({ a: 1 }, {})              // { a: 1 }
+assignDeep({ a: 1 }, { a: 2 })        // { a: 2 }
+assignDeep({ a: 1 }, { a: { b: 2 } }) // { a: { b: 2 } }
+assignDeep({ a: { b: { c: 1 }}}, { a: { b: { d: 2 }}, e: 3 })// { a: { b: { c: 1, d: 2 }}, e: 3 }</code></pre><p>reduceAsync- 仿照reduce 你在“简单”部分中完成了，但每个条目都必须在进行下一步之前被解决。</p><pre><code>let a = () =&gt; Promise.resolve(&#39;a&#39;)
+let b = () =&gt; Promise.resolve(&#39;b&#39;)
+let c = () =&gt; new Promise(resolve =&gt; setTimeout(() =&gt; resolve(&#39;c&#39;), 100))
+await reduceAsync([a, b, c], (acc, value) =&gt; [...acc, value], []) // [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;]
+await reduceAsync([a, c, b], (acc, value) =&gt; [...acc, value], [&#39;d&#39;])// [&#39;d&#39;, &#39;a&#39;, &#39;c&#39;, &#39;b&#39;]</code></pre><p>用reduceAsync来实现seq。seq使用一个可返回 promise的函数体内使用数组的函数，然后逐一的解决。</p><pre><code>let a = () =&gt; Promise.resolve(&#39;a&#39;)
+let b = () =&gt; Promise.resolve(&#39;b&#39;)
+let c = () =&gt; Promise.resolve(&#39;c&#39;)
+await seq([a, b, c])                  // [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;]
+await seq([a, c, b])                  // [&#39;a&#39;, &#39;c&#39;, &#39;b&#39;]</code></pre><h2 id="困难"><a href="#困难" class="headerlink" title="困难"></a>困难</h2><p>注意：下面你要实现的数据结构问题，意不在让你记住它们，而只是希望你去查看给出的API，Google是怎么考虑且实现它们的，然后站在一个较高的角度去思考这些实现和其他数据结构相比如何。</p><p>permute - 返回一个字符串数组，包含给定的字符串的所有的排列。</p><pre><code>permute(&#39;&#39;)             // []
+permute(&#39;abc&#39;)          // [&#39;abc&#39;, &#39;acb&#39;, &#39;bac&#39;, &#39;bca&#39;, &#39;cab&#39;, &#39;cba&#39;]</code></pre><p>debounce - 实现 debounce 函数.</p><pre><code>let a = () =&gt; console.log(&#39;foo&#39;)let b = debounce(a, 100)
+b()
+b()
+b() // only this call should invoke a()</code></pre><p>实现一个 LinkedList 类，不用 JavaScript的built-in 数组 ([]). 你的链表需要支持两种方法，add和has。</p><pre><code>class LinkedList {...}
+let list = new LinkedList(1, 2, 3)
+list.add(4)                           // undefined
+list.add(5)                           // undefined
+list.has(1)                           // true
+list.has(4)                           // true
+list.has(6)                           // false</code></pre><p>实现一个HashMap 类，不用JavaScript的built-in objects ({}) 方法或者是Maps方法。你需要提供一个hash()函数，传入一个字符串，返回一个数字（大多数情况下数字都是唯一的，有时候两个不同的字符串会返回一样的数字）：</p><pre><code>function hash (string) {  
+    return string
+    .split(&#39;&#39;)
+    .reduce((a, b) =&gt; ((a &lt;&lt; 5) + a) + b.charCodeAt(0), 5381)
+}</code></pre><p>你有的哈希表需要支持两种方法，get和set:</p><pre><code>let map = new HashMap
+map.set(&#39;abc&#39;, 123)                   // undefined
+map.set(&#39;foo&#39;, &#39;bar&#39;)                 // undefined
+map.set(&#39;foo&#39;, &#39;baz&#39;)                 // undefined
+map.get(&#39;abc&#39;)                        // 123
+map.get(&#39;foo&#39;)                        // &#39;baz&#39;
+map.get(&#39;def&#39;)                        // undefined</code></pre><p>实现一个BinarySearchTree（二叉搜索树）类，需要支持四种方法：add，has，remove， size：</p><pre><code>let tree = new BinarySearchTree
+tree.add(1, 2, 3, 4)
+tree.add(5)
+tree.has(2)                           // true
+tree.has(5)                           // true
+tree.remove(3)                        // undefined
+tree.size()                           // 4</code></pre><p>实现一个BinaryTree（二叉树）类，广度优先搜索、中序排列、先序排列、后序遍历深度优先搜索功能。</p><pre><code>let tree = new BinaryTreelet fn = value =&gt; console.log(value)
+tree.add(1, 2, 3, 4)
+tree.bfs(fn)                          // undefined
+tree.inorder(fn)                      // undefined
+tree.preorder(fn)                     // undefined
+tree.postorder(fn)                    // undefined</code></pre><h1 id="改错"><a href="#改错" class="headerlink" title="改错"></a>改错</h1><p>下面的每一个问题，先要弄明白为什么给出的代码块无法正常实现功能，然后想出解决方案，编写代码，正常实现功能：</p><p>我想要代码打印出：“hey amy”，但是它打印的是“hey arnold”，为什么呢？</p><pre><code>function greet(person) {  
+    if (person == { name: &#39;amy&#39; }) {    
+        return &#39;hey amy&#39;
+    } else {    
+      return &#39;hey arnold&#39;
+    }
+}
+greet({ name: &#39;amy&#39; })</code></pre><p>我希望代码按顺序打印出数字0，1，2，3，但是现在并不是这样的输出（这一度被认为是一个小bug，很多人喜欢在面试的时候提问为什么）</p><pre><code>for (var i = 0; i &lt; 4; i++) {
+  setTimeout(() =&gt; console.log(i), 0)
+}</code></pre><p>我希望代码打印出“doggo”，但是现在打出来是undefined</p><pre><code>let dog = {  name: &#39;doggo&#39;,
+  sayName() {    console.log(this.name)
+  }
+}
+let sayName = dog.sayName
+sayName()</code></pre><p>我想要我的狗狗bark()，但是我得到的确实error，为什么呢？</p><pre><code>function Dog(name) {  
+    this.name = name
+}
+Dog.bark = function() {  
+    console.log(this.name + &#39; says woof&#39;)
+}
+let fido = new Dog(&#39;fido&#39;)
+fido.bark()</code></pre><p>为什么这个代码会返回这样结果？</p><pre><code>function isBig(thing) {  
+  if (thing == 0 || thing == 1 || thing == 2) {   
+         return false
+  }  
+  return true
+}
+isBig(1)    // falseisBig([2])  // falseisBig([3])  // true</code></pre><h1 id="系统设计"><a href="#系统设计" class="headerlink" title="系统设计"></a>系统设计</h1><p>如果你不是很明白“系统设计”，你可以从<a href="https://github.com/donnemartin/system-design-primer" target="_blank" rel="noopener">这里</a>开始学习。</p><p>来聊聊看，如果想要做一个完整的自动补全的小程序(widget)。用户可以在其中输入文字，并从服务器得到返回结果。</p><p>你会如何设计一个支持以下功能的前端页面：</p><ol><li><p>从后台API获取数据</p></li><li><p>以树形渲染结果（每个对象可以有父/子，而不是一个平铺的列表）</p></li><li><p>支持checkbox, radio button, icon以及普通的列表项-列表项从很多的表单中得到</p></li></ol><p>组件API是怎样的？<br>后端API是怎样的？<br>对于补全输入的行为还有什么会影响到性能的事是要额外考虑进去的？是否有一些边缘情况发生（比如如果用户输入速度快，网络速度慢）？<br>若要前端展现更加迅速，你会怎么设计网络部分以及架构后端？你的客户端和服务器是怎样通信的？后端的数据如何存储？当扩展到有大量数据和大量客户时，如何实现这些功能？</p><p>谈谈如何实现Twitter的全栈构建（从我的朋友<a href="https://github.com/blaisebaileyfinnegan" target="_blank" rel="noopener">Michael Vu</a>那窃来的题目，害羞）。<br>如何获取并渲染每条推特消息？<br>当有新的推文来了你该如何渲染？你如何知道啥时候来了新的推文？<br>你该如何设计搜索推文？如何按作者搜索推文？聊聊你的数据库、后台以及API设计。</p><h1 id="更多资料"><a href="#更多资料" class="headerlink" title="更多资料"></a>更多资料</h1><p>如果你这些都了解了想要了解更多知识，下面有一些我找到的更高质量的资源也许对你有帮助。</p><p>有帮助的项目：</p><p><a href="https://smile.amazon.com/Algorithm-Design-Manual-Steven-Skiena/dp/1848000693" target="_blank" rel="noopener">The Algorithm Design Manual</a></p><p><a href="https://code.google.com/codejam/past-contests" target="_blank" rel="noopener">Past CodeJam problems</a></p><p><a href="https://github.com/keon/algorithms" target="_blank" rel="noopener">keon/algorithms</a></p><p>有帮助的书籍：</p><p><a href="https://smile.amazon.com/Algorithm-Design-Manual-Steven-Skiena/dp/1848000693" target="_blank" rel="noopener">The Algorithm Design Manual</a> 算法设计手册</p><p><a href="https://leanpub.com/javascriptallongesix/read" target="_blank" rel="noopener">JavaScript Allonge</a> JavaScript附录</p><p><a href="https://github.com/getify/You-Dont-Know-JS" target="_blank" rel="noopener">You Don’t Know JS</a> 你不知道的JavaScript</p><p><a href="https://smile.amazon.com/Effective-JavaScript-Specific-Software-Development/dp/0321812182" target="_blank" rel="noopener">Effective JavaScript</a> 高效的JavaScript</p><hr></div><br><div><p><span><i class="iconfont icon-tag"></i> <a class="hover-with-bg" href="/tags/%E5%89%8D%E7%AB%AF%E6%94%B6%E8%97%8F">前端收藏</a></span></p><p class="note note-warning">本博客所有文章除特别声明外，均采用 <a href="https://zh.wikipedia.org/wiki/Wikipedia:CC_BY-SA_3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" target="_blank" rel="nofollow noopener noopener">CC BY-SA 3.0协议</a> 。转载请注明出处！</p></div></div></div></div><div class="d-none d-lg-block col-lg-2 toc-container"><div id="toc"><p class="h4"><i class="far fa-list-alt"></i>&nbsp;目录</p><div id="tocbot"></div></div></div></div></div><div class="col-lg-7 mx-auto nopadding-md"><div class="container comments mx-auto" id="comments"></div></div></main><a class="z-depth-1" id="scroll-top-button" href="#" role="button"><i class="fa fa-chevron-up scroll-top-arrow" aria-hidden="true"></i></a><div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable modal-lg" role="document"><div class="modal-content"><div class="modal-header text-center"><h4 class="modal-title w-100 font-weight-bold">搜索</h4> <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span></button></div><div class="modal-body mx-3"><div class="md-form mb-5"> <input type="text" id="local-search-input" class="form-control validate"> <label data-error="x" data-success="v" for="local-search-input">关键词</label></div><div class="list-group" id="local-search-result"></div></div></div></div></div><footer class="mt-5"><div class="text-center py-3"><p> <b>猿生活</b> <a href="https://beianx.cn/bacx/%E8%9C%80icp%E5%A4%872020026020%E5%8F%B7-1" target="_blank" rel="nofollow noopener"><b>蜀ICP备2020026020号</b></a></p> &nbsp;<span id="busuanzi_container_site_pv"><span id="busuanzi_value_site_pv"></span></span> &nbsp; &nbsp;<span id="busuanzi_container_site_uv"><span id="busuanzi_value_site_uv"></span></span> &nbsp;<br></div></footer><script src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js"></script><script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script><script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script><script src="https://cdn.staticfile.org/mdbootstrap/4.8.9/js/mdb.min.js"></script><script src="/js/main.js"></script><script src="/js/lazyload.js"></script><script src="https://cdn.staticfile.org/tocbot/4.8.0/tocbot.min.js"></script><script src="/js/post.js"></script><script src="https://cdn.staticfile.org/smooth-scroll/16.1.0/smooth-scroll.min.js"></script><script src="https://cdn.staticfile.org/prettify/r298/prettify.min.js"></script><script>$(document).ready(function(){$("pre").addClass("prettyprint  linenums"),prettyPrint()})</script><script src="https://cdn.staticfile.org/typed.js/2.0.10/typed.min.js"></script><script>var typed=new Typed("#subtitle",{strings:["  ","最佳（中高级）前端面试题&nbsp;"],cursorChar:"_",typeSpeed:70,loop:!1});typed.stop(),$(document).ready(function(){$(".typed-cursor").addClass("h2"),typed.start()})</script><script src="https://cdn.staticfile.org/anchor-js/4.2.0/anchor.min.js"></script><script>
+    anchors.options = {
+      placement: "right",
+      visible: "false",
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script><script src="/js/local-search.js"></script><script>var path="/local-search.xml",inputArea=document.querySelector("#local-search-input");inputArea.onclick=function(){getSearchFile(path),this.onclick=null}</script><script src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js"></script><script>$("#post img:not(.no-zoom img, img[no-zoom])").each(function(){var t=document.createElement("a");$(t).attr("data-fancybox","images"),$(t).attr("href",$(this).attr("src")),$(this).wrap(t)})</script><script type="text/javascript">var a_idx=0;jQuery(document).ready(function(d){d("body").click(function(a){var o=new Array("富强","民主","文明","和谐","自由","平等","公正","法治","爱国","敬业","诚信","友善"),t=d("<span/>").text(o[a_idx]);a_idx=(a_idx+1)%o.length;var n=a.pageX,e=a.pageY;t.css({"z-index":999,top:e-20,left:n,position:"absolute","font-weight":"bold",color:"rgb("+~~(255*Math.random())+","+~~(255*Math.random())+","+~~(255*Math.random())+")"}),d("body").append(t),t.animate({top:e-180,opacity:0},1500,function(){t.remove()})})})</script></body></html>

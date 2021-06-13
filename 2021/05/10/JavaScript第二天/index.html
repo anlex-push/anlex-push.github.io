@@ -1,0 +1,306 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><link rel="apple-touch-icon" sizes="76x76" href="/img/apple-touch-icon.png"><link rel="icon" type="image/png" href="/img/favicon.png"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,shrink-to-fit=no"><meta http-equiv="x-ua-compatible" content="ie=edge"><meta name="description" content=""><meta name="author" content="Anlex-Push"><meta name="keywords" content=""><title>JavaScript第二天 ~ Anlex-Push</title><link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/5.10.2/css/all.min.css"><link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css"><link rel="stylesheet" href="https://cdn.staticfile.org/mdbootstrap/4.8.9/css/mdb.min.css"><link rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/3.0.1/github-markdown.min.css"><link rel="stylesheet" href="//at.alicdn.com/t/font_1067060_qzomjdt8bmp.css"><link rel="stylesheet" href="/lib/prettify/tomorrow-night-eighties.min.css"><link rel="stylesheet" href="/css/main.css"><link rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css"><meta name="generator" content="Hexo 4.2.0"></head><body><header style="height:70vh"><nav id="navbar" class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar"><div class="container"> <a class="navbar-brand" href="/">&nbsp;<strong>Anlex-Push</strong>&nbsp;</a> <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><div class="animated-icon"><span></span><span></span><span></span></div></button><div class="collapse navbar-collapse" id="navbarSupportedContent"><ul class="navbar-nav ml-auto text-center"><li class="nav-item"> <a class="nav-link" href="/">首页</a></li><li class="nav-item"> <a class="nav-link" href="/archives/">归档</a></li><li class="nav-item"> <a class="nav-link" href="/categories/">分类</a></li><li class="nav-item"> <a class="nav-link" href="/tags/">标签</a></li><li class="nav-item"> <a class="nav-link" href="/about/">关于</a></li><li class="nav-item" id="search-btn"> <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;&nbsp;<i class="iconfont icon-search"></i>&nbsp;&nbsp;</a></li></ul></div></div></nav><div class="view intro-2" id="background" style="background:url(/img/article.png) no-repeat center center;background-size:cover;background-attachment:fixed"><div class="full-bg-img"><div class="mask rgba-black-light flex-center"><div class="container text-center white-text fadeInUp"><span class="h2" id="subtitle"></span><br><p class="mt-3"><i class="fas fa-calendar-alt" aria-hidden="true"></i> &nbsp; 星期一, 五月 10日 2021, 4:14 下午</p><p> &nbsp;<i class="far fa-chart-bar"></i> <span class="post-count">3.9k 字</span> &nbsp; &nbsp;<i class="far fa-clock"></i> <span class="post-count">18 分钟</span> &nbsp; &nbsp;<i class="far fa-eye" aria-hidden="true"></i>&nbsp;<span id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv"></span> 次</span> &nbsp;</p></div></div></div></div></header><main><div class="container-fluid"><div class="row"><div class="d-none d-lg-block col-lg-2"></div><div class="col-lg-8 nopadding-md"><div class="py-5 z-depth-3" id="board"><div class="post-content mx-auto" id="post"><div class="markdown-body"><p>开始学习挑战30天JavaScript的第二天。</p><h1 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h1><p>在上一节中，我们提到了一些有关数据类型的内容。 数据或值具有数据类型。 数据类型描述了数据的特征。 数据类型可以分为两种：</p><ol><li>原始数据类型</li><li>非原始数据类型（对象引用）</li></ol><h1 id="基本数据类型"><a href="#基本数据类型" class="headerlink" title="基本数据类型"></a>基本数据类型</h1><p>JavaScript中的基本数据类型包括：</p><ol><li>Number 数字-整数，浮点数</li><li>String 字符串-单引号，双引号或反引号下的任何数据</li><li>Boolean 布尔值-真或假值</li><li>Null 空-空值或无值</li><li>Undefined 未定义-没有值的声明变量</li></ol><p>JavaScript中的非基本数据类型包括:</p><ol><li>Object</li><li>Function</li><li>Arrays</li></ol><p>现在，让我们看看基本和非基本数据类型的确切含义。 基本数据类型是不可变（不可修改）数据类型。 创建原始数据类型后，我们将无法对其进行修改。<br>示例</p><pre><code>let word = &#39;JavaScript&#39;;</code></pre><p>如果我们尝试修改存储在可变字中的字符串，则JavaScript应该引发错误。 单引号，双引号或反引号下的任何数据类型都是字符串数据类型。</p><pre><code>word[0] = &#39;Y&#39;;</code></pre><p>此表达式不会更改存储在变量字中的字符串。 因此，我们可以说字符串是不可修改的，或者说是不可更改的。 通过其值比较原始数据类型。 让我们比较不同的数据值。 请参见下面的示例：</p><pre><code>let numOne = 3
+let numTwo = 3
+
+console.log(numOne == numTwo)      // true
+
+let js = &#39;JavaScript&#39;
+let py = &#39;Python&#39;
+
+console.log(js == py)             //false 
+
+let lightOn = true
+let lightOff = false
+
+console.log(lightOn == lightOff) // false</code></pre><h1 id="非基本数据类型"><a href="#非基本数据类型" class="headerlink" title="非基本数据类型"></a>非基本数据类型</h1><p>非基本数据类型是可修改或可变的。 创建非基本数据类型后，我们可以对其进行修改。 让我们通过创建一个数组来看看。 数组是方括号中的数据值列表。 数组可以包含相同或不同的数据类型。 数组值由其索引引用。 在JavaScript中，数组索引从零开始。 即，数组的第一个元素位于索引零，第二个元素位于索引一，第三个元素位于索引二，依此类推。</p><pre><code>let nums = [1, 2, 3]
+nums[0] = 10
+
+console.log(nums)  // [10, 2, 3]</code></pre><p>如您所见，作为非基本数据类型的数组是可变的。 非基本数据类型无法按值进行比较。 即使两个非基本数据类型具有相同的属性和值，它们也不是严格相等的。</p><pre><code>let nums = [1, 2, 3]
+let numbers = [1, 2, 3]
+
+console.log(nums == numbers)  // false
+
+let userOne = {
+name:&#39;Asabeneh&#39;,
+role:&#39;teaching&#39;,
+country:&#39;Finland&#39;
+}
+
+let userTwo = {
+name:&#39;Asabeneh&#39;,
+role:&#39;teaching&#39;,
+country:&#39;Finland&#39;
+}
+
+console.log(userOne == userTwo) // false</code></pre><p>根据经验，我们不比较非基本数据类型。 不要比较数组，函数或对象。 非基本值称为引用类型，因为它们是通过引用而不是值进行比较的。 如果两个对象引用相同的基础对象，则它们严格相等。</p><pre><code>let nums = [1, 2, 3]
+let numbers = nums
+
+console.log(nums == numbers)  // true
+
+let userOne = {
+name:&#39;Asabeneh&#39;,
+role:&#39;teaching&#39;,
+country:&#39;Finland&#39;
+}
+
+let userTwo = userOne
+
+console.log(userOne == userTwo)  // true</code></pre><p>如果您很难理解基本数据类型和非基本数据类型之间的区别，那么您不是唯一的人。 冷静下来，然后转到下一部分，尝试在一段时间后再回来。 现在让我们从数字类型开始数据类型。</p><h1 id="Numbers"><a href="#Numbers" class="headerlink" title="Numbers"></a>Numbers</h1><p>数字是可以执行所有算术运算的整数和十进制值。 让我们看一些数字的例子。</p><h2 id="声明数据类型"><a href="#声明数据类型" class="headerlink" title="声明数据类型"></a>声明数据类型</h2><pre><code>let age = 35
+const gravity = 9.81  // we use const for non-changing values, gravitational constant in  m/s2
+let mass = 72         // mass in Kilogram
+const PI = 3.14       // pi a geometrical constant
+
+// More Examples
+const boilingPoint = 100 // temperature in oC, boiling point of water which is a constant
+const bodyTemp = 37      // oC average human body temperature, which is a constant
+
+console.log(age, gravity, mass, PI, boilingPoint, bodyTemp)</code></pre><h1 id="数学对象"><a href="#数学对象" class="headerlink" title="数学对象"></a>数学对象</h1><p>在JavaScript中，数学对象提供了许多处理数字的方法。</p><pre><code>const PI = Math.PI
+
+console.log(PI)                            // 3.141592653589793
+
+// Rounding to the closest number
+// if above .5 up if less 0.5 down rounding
+
+console.log(Math.round(PI))                // 3 to round values to the nearest number
+
+console.log(Math.round(9.81))              // 10
+
+console.log(Math.floor(PI))                // 3 rounding down
+
+console.log(Math.ceil(PI))                 // 4 rounding up
+
+console.log(Math.min(-5, 3, 20, 4, 5, 10)) // -5, returns the minimum value
+
+console.log(Math.max(-5, 3, 20, 4, 5, 10)) // 20, returns the maximum value
+
+const randNum = Math.random() // creates random number between 0 to 0.999999
+console.log(randNum)
+
+// Let us  create random number between 0 to 10
+
+const num = Math.floor(Math.random () * 11) // creates random number between 0 and 10
+console.log(num)
+
+//Absolute value
+console.log(Math.abs(-10))      // 10
+
+//Square root
+console.log(Math.sqrt(100))     // 10
+
+console.log(Math.sqrt(2))       // 1.4142135623730951
+
+// Power
+console.log(Math.pow(3, 2))     // 9
+
+console.log(Math.E)             // 2.718
+
+// Logarithm
+// Returns the natural logarithm with base E of x, Math.log(x)
+console.log(Math.log(2))        // 0.6931471805599453
+console.log(Math.log(10))       // 2.302585092994046
+
+// Trigonometry
+Math.sin(0)
+Math.sin(60)
+
+Math.cos(0)
+Math.cos(60)</code></pre><h1 id="随机数生成器"><a href="#随机数生成器" class="headerlink" title="随机数生成器"></a>随机数生成器</h1><p>JavaScript Math对象具有一个random()方法数字生成器，该生成器生成从0到0.999999999的数字。</p><pre><code>let randomNum = Math.random() // generates 0 to 0.999...</code></pre><p>现在，让我们看看如何使用random（）方法生成介于0到10之间的随机数：</p><pre><code>let randomNum = Math.random()         // generates 0 to 0.999
+let numBtnZeroAndTen = randomNum * 11
+
+console.log(numBtnZeroAndTen)         // this gives: min 0 and max 10.99
+
+let randomNumRoundToFloor = Math.floor(numBtnZeroAndTen)
+console.log(randomNumRoundToFloor)    // this gives between 0 and 10</code></pre><h1 id="String"><a href="#String" class="headerlink" title="String"></a>String</h1><p>字符串是文本，用单引号，双引号和反引号引起来。 要声明字符串，我们需要一个变量名，赋值运算符，单引号，双引号或反引号下的值。 让我们看一些字符串示例：</p><pre><code>let space = &#39; &#39;           // an empty space string
+let firstName = &#39;Asabeneh&#39;
+let lastName = &#39;Yetayeh&#39;
+let country = &#39;Finland&#39;
+let city = &#39;Helsinki&#39;
+let language = &#39;JavaScript&#39;
+let job = &#39;teacher&#39;
+let quote = &quot;The saying,&#39;Seeing is Believing&#39; is not correct in 2020.&quot;
+let quotWithBackTick = `The saying,&#39;Seeing is Believing&#39; is not correct in 2020.`</code></pre><h1 id="字符串连接"><a href="#字符串连接" class="headerlink" title="字符串连接"></a>字符串连接</h1><p>将两个或多个字符串连接在一起称为串联。 使用前面的“字符串”部分中声明的字符串：</p><pre><code>let fullName = firstName + space + lastName; // concatenation, merging two string together.
+console.log(fullName);</code></pre><p>我们可以用不同的方式连接字符串。</p><h2 id="串联使用加法运算符"><a href="#串联使用加法运算符" class="headerlink" title="串联使用加法运算符"></a>串联使用加法运算符</h2><p>使用加法运算符进行连接是一种旧方法。 这种连接方式既繁琐又容易出错。 很高兴知道如何以这种方式进行连接，但是我强烈建议使用ES6模板字符串（稍后说明）</p><pre><code>// Declaring different variables of different data types
+let space = &#39; &#39;
+let firstName = &#39;Asabeneh&#39;
+let lastName = &#39;Yetayeh&#39;
+let country = &#39;Finland&#39;
+let city = &#39;Helsinki&#39;
+let language = &#39;JavaScript&#39;
+let job = &#39;teacher&#39;
+let age = 250
+
+
+let fullName =firstName + space + lastName
+let personInfoOne = fullName + &#39;. I am &#39; + age + &#39;. I live in &#39; + country; // ES5 string addition
+
+console.log(personInfoOne)</code></pre><h1 id="长文本字符串"><a href="#长文本字符串" class="headerlink" title="长文本字符串"></a>长文本字符串</h1><p>字符串可以是单个字符或段落或页面。 如果字符串长度太大，则它不能排成一行。 我们可以在每一行的末尾使用反斜杠字符（\）来指示该字符串将在下一行继续。 例子：</p><pre><code>const paragraph = &quot;My name is Asabeneh Yetayeh. I live in Finland, Helsinki.\
+I am a teacher and I love teaching. I teach HTML, CSS, JavaScript, React, Redux, \
+Node.js, Python, Data Analysis and D3.js for anyone who is interested to learn. \
+In the end of 2019, I was thinking to expand my teaching and to reach \
+to global audience and I started a Python challenge from November 20 - December 19.\
+It was one of the most rewarding and inspiring experience.\
+Now, we are in 2020. I am enjoying preparing the 30DaysOfJavaScript challenge and \
+I hope you are enjoying too.&quot;
+
+console.log(paragraph)</code></pre><h1 id="字符串中的转义序列"><a href="#字符串中的转义序列" class="headerlink" title="字符串中的转义序列"></a>字符串中的转义序列</h1><p>在JavaScript和其他编程语言中，\后跟一些字符是转义序列。 让我们看看最常见的转义字符：</p><ol><li>\n: 换行</li><li>\t: 制表符，表示8个空格</li><li>\: 反斜线</li><li>&#39;: 单引号 (‘)</li><li>&quot;: 双引号 (“)</li></ol><pre><code>console.log(&#39;I hope everyone is enjoying the 30 Days Of JavaScript challenge.\nDo you ?&#39;) // line break
+console.log(&#39;Days\tTopics\tExercises&#39;)
+console.log(&#39;Day 1\t3\t5&#39;)
+console.log(&#39;Day 2\t3\t5&#39;)
+console.log(&#39;Day 3\t3\t5&#39;)
+console.log(&#39;Day 4\t3\t5&#39;)
+console.log(&#39;This is a backslash  symbol (\\)&#39;) // To write a backslash
+console.log(&#39;In every programming language it starts with \&quot;Hello, World!\&quot;&#39;)
+console.log(&quot;In every programming language it starts with \&#39;Hello, World!\&#39;&quot;)
+console.log(&#39;The saying \&#39;Seeing is Believing\&#39; isn\&#39;t correct in 2020&#39;)</code></pre><h1 id="模板字符串"><a href="#模板字符串" class="headerlink" title="模板字符串"></a>模板字符串</h1><p>要创建模板字符串，我们使用两个反引号。 我们可以将数据作为表达式插入模板字符串中。 要注入数据，我们在表达式前用大括号（{}）括起$符号。 请参见下面的语法。</p><pre><code>//Syntax
+`String literal text`
+`String literal text ${expression}`</code></pre><p>示例1：</p><pre><code>console.log(`The sum of 2 and 3 is 5`)              // statically writing the data
+let a = 2
+let b = 3
+console.log(`The sum of ${a} and ${b} is ${a + b}`) // injecting the data dynamically</code></pre><p>示例2：</p><pre><code>let firstName = &#39;Asabeneh&#39;
+let lastName = &#39;Yetayeh&#39;
+let country = &#39;Finland&#39;
+let city = &#39;Helsinki&#39;
+let language = &#39;JavaScript&#39;
+let job = &#39;teacher&#39;
+let age = 250
+let fullName = firstName + &#39; &#39; + lastName
+
+let personInfoTwo = `I am ${fullName}. I am ${age}. I live in ${country}.` //ES6 - String interpolation method
+let personInfoThree = `I am ${fullName}. I live in ${city}, ${country}. I am a ${job}. I teach ${language}.`
+console.log(personInfoTwo)
+console.log(personInfoThree)</code></pre><p>使用字符串模板或字符串插值方法，我们可以添加表达式，它可以是一个值或某些运算（比较，算术运算，三进制运算）。</p><pre><code>let a = 2
+let b = 3
+console.log(`${a} is greater than ${b}: ${a &gt; b}`)</code></pre><h1 id="字符串内置方法"><a href="#字符串内置方法" class="headerlink" title="字符串内置方法"></a>字符串内置方法</h1><p>JavaScript中的所有内容都是一个对象。 字符串是原始数据类型，这意味着一旦创建它便无法对其进行修改。 字符串对象有许多字符串方法。 有许多不同的字符串方法可以帮助我们处理字符串。</p><h2 id="length：字符串长度方法返回字符串中包含空格的字符数。"><a href="#length：字符串长度方法返回字符串中包含空格的字符数。" class="headerlink" title="length：字符串长度方法返回字符串中包含空格的字符数。"></a>length：字符串长度方法返回字符串中包含空格的字符数。</h2><p>示例：</p><pre><code>let js = &#39;JavaScript&#39;
+console.log(js.length)         // 10
+let firstName = &#39;Asabeneh&#39;
+console.log(firstName.length)  // 8</code></pre><p>访问字符串中的字符：我们可以使用其索引访问字符串中的每个字符。 在编程中，计数从0开始。字符串的第一个索引为零，最后一个索引为字符串的长度减一。</p><p>让我们访问“ JavaScript”字符串中的不同字符。</p><pre><code>let string = &#39;JavaScript&#39;
+let firstLetter = string[0]
+
+console.log(firstLetter)           // J
+
+let secondLetter = string[1]       // a
+let thirdLetter = string[2]
+let lastLetter = string[9]
+
+console.log(lastLetter)            // t
+
+let lastIndex = string.length - 1
+
+console.log(lastIndex)  // 9
+console.log(string[lastIndex])    // t</code></pre><h2 id="toUpperCase（）：此方法将字符串更改为大写字母。"><a href="#toUpperCase（）：此方法将字符串更改为大写字母。" class="headerlink" title="toUpperCase（）：此方法将字符串更改为大写字母。"></a>toUpperCase（）：此方法将字符串更改为大写字母。</h2><pre><code>let string = &#39;JavaScript&#39;
+
+console.log(string.toUpperCase())     // JAVASCRIPT
+
+let firstName = &#39;Asabeneh&#39;
+
+console.log(firstName.toUpperCase())  // ASABENEH
+
+let country = &#39;Finland&#39;
+
+console.log(country.toUpperCase())    // FINLAND</code></pre><h2 id="toLowerCase（）：此方法将字符串更改为小写字母。"><a href="#toLowerCase（）：此方法将字符串更改为小写字母。" class="headerlink" title="toLowerCase（）：此方法将字符串更改为小写字母。"></a>toLowerCase（）：此方法将字符串更改为小写字母。</h2><pre><code>let string = &#39;JavasCript&#39;
+
+console.log(string.toLowerCase())     // javascript
+
+let firstName = &#39;Asabeneh&#39;
+
+console.log(firstName.toLowerCase())  // asabeneh
+
+let country = &#39;Finland&#39;
+
+console.log(country.toLowerCase())   // finland</code></pre><h2 id="substr（）：它有两个参数，起始索引和要分割的字符数。"><a href="#substr（）：它有两个参数，起始索引和要分割的字符数。" class="headerlink" title="substr（）：它有两个参数，起始索引和要分割的字符数。"></a>substr（）：它有两个参数，起始索引和要分割的字符数。</h2><pre><code>let string = &#39;JavaScript&#39;
+console.log(string.substr(4,6))    // Script
+
+let country = &#39;Finland&#39;
+console.log(country.substr(3, 4))   // land</code></pre><h2 id="substring（）：它接受两个参数，即起始索引和终止索引，但不包含终止索引处的字符。"><a href="#substring（）：它接受两个参数，即起始索引和终止索引，但不包含终止索引处的字符。" class="headerlink" title="substring（）：它接受两个参数，即起始索引和终止索引，但不包含终止索引处的字符。"></a>substring（）：它接受两个参数，即起始索引和终止索引，但不包含终止索引处的字符。</h2><pre><code>let string = &#39;JavaScript&#39;
+
+console.log(string.substring(0,4))     // Java
+console.log(string.substring(4,10))    // Script
+console.log(string.substring(4))       // Script
+
+let country = &#39;Finland&#39;
+
+console.log(country.substring(0, 3))   // Fin
+console.log(country.substring(3, 7))   // land
+console.log(country.substring(3))      // land</code></pre><h2 id="split（）：split方法在指定位置分割字符串。"><a href="#split（）：split方法在指定位置分割字符串。" class="headerlink" title="split（）：split方法在指定位置分割字符串。"></a>split（）：split方法在指定位置分割字符串。</h2><pre><code>let string = &#39;30 Days Of JavaScript&#39;
+
+console.log(string.split())     // Changes to an array -&gt; [&quot;30 Days Of JavaScript&quot;]
+console.log(string.split(&#39; &#39;))  // Split to an array at space -&gt; [&quot;30&quot;, &quot;Days&quot;, &quot;Of&quot;, &quot;JavaScript&quot;]
+
+let firstName = &#39;Asabeneh&#39;
+
+console.log(firstName.split())    // Change to an array - &gt; [&quot;Asabeneh&quot;]
+console.log(firstName.split(&#39;&#39;))  // Split to an array at each letter -&gt;  [&quot;A&quot;, &quot;s&quot;, &quot;a&quot;, &quot;b&quot;, &quot;e&quot;, &quot;n&quot;, &quot;e&quot;, &quot;h&quot;]
+
+let countries = &#39;Finland, Sweden, Norway, Denmark, and Iceland&#39;
+
+console.log(countries.split(&#39;,&#39;))  // split to any array at comma -&gt; [&quot;Finland&quot;, &quot; Sweden&quot;, &quot; Norway&quot;, &quot; Denmark&quot;, &quot; and Iceland&quot;]
+console.log(countries.split(&#39;, &#39;)) //  [&quot;Finland&quot;, &quot;Sweden&quot;, &quot;Norway&quot;, &quot;Denmark&quot;, &quot;and Iceland&quot;]</code></pre><h2 id="trim（）：删除字符串开头或结尾的尾部空格。"><a href="#trim（）：删除字符串开头或结尾的尾部空格。" class="headerlink" title="trim（）：删除字符串开头或结尾的尾部空格。"></a>trim（）：删除字符串开头或结尾的尾部空格。</h2><pre><code>let string = &#39;   30 Days Of JavaScript   &#39;
+
+console.log(string)
+console.log(string.trim(&#39; &#39;))
+
+let firstName = &#39; Asabeneh &#39;
+
+console.log(firstName)
+console.log(firstName.trim())  // still removes spaces at the beginning and the end of the string</code></pre><h2 id="include（）：它接受一个子字符串参数，并检查字符串中是否存在子字符串参数。-include（）返回一个布尔值。-如果字符串中存在子字符串，则返回true，否则返回false。"><a href="#include（）：它接受一个子字符串参数，并检查字符串中是否存在子字符串参数。-include（）返回一个布尔值。-如果字符串中存在子字符串，则返回true，否则返回false。" class="headerlink" title="include（）：它接受一个子字符串参数，并检查字符串中是否存在子字符串参数。 include（）返回一个布尔值。 如果字符串中存在子字符串，则返回true，否则返回false。"></a>include（）：它接受一个子字符串参数，并检查字符串中是否存在子字符串参数。 include（）返回一个布尔值。 如果字符串中存在子字符串，则返回true，否则返回false。</h2><pre><code>let string = &#39;30 Days Of JavaScript&#39;
+
+console.log(string.includes(&#39;Days&#39;))     // true
+console.log(string.includes(&#39;days&#39;))     // false - it is case sensitive!
+console.log(string.includes(&#39;Script&#39;))   // true
+console.log(string.includes(&#39;script&#39;))   // false
+console.log(string.includes(&#39;java&#39;))     // false
+console.log(string.includes(&#39;Java&#39;))     // true
+
+let country = &#39;Finland&#39;
+
+console.log(country.includes(&#39;fin&#39;))     // false
+console.log(country.includes(&#39;Fin&#39;))     // true
+console.log(country.includes(&#39;land&#39;))    // true
+console.log(country.includes(&#39;Land&#39;))    // false</code></pre><h2 id="replace（）：将旧的子字符串和新的子字符串作为参数。"><a href="#replace（）：将旧的子字符串和新的子字符串作为参数。" class="headerlink" title="replace（）：将旧的子字符串和新的子字符串作为参数。"></a>replace（）：将旧的子字符串和新的子字符串作为参数。</h2><pre><code>let string = &#39;30 Days Of JavaScript&#39;
+console.log(string.replace(&#39;JavaScript&#39;, &#39;Python&#39;)) // 30 Days Of Python
+
+let country = &#39;Finland&#39;
+console.log(country.replace(&#39;Fin&#39;, &#39;Noman&#39;))       // Nomanland</code></pre><h2 id="charAt-取index并返回该索引处的值"><a href="#charAt-取index并返回该索引处的值" class="headerlink" title="charAt() 取index并返回该索引处的值"></a>charAt() 取index并返回该索引处的值</h2><pre><code>let string = &#39;30 Days Of JavaScript&#39;
+console.log(string.charAt(0))        // 3
+
+let lastIndex = string.length - 1
+console.log(string.charAt(lastIndex)) // t</code></pre><h2 id="charCodeAt-取index并返回索引处值的字符代码-ASCII码"><a href="#charCodeAt-取index并返回索引处值的字符代码-ASCII码" class="headerlink" title="charCodeAt(): 取index并返回索引处值的字符代码(ASCII码)"></a>charCodeAt(): 取index并返回索引处值的字符代码(ASCII码)</h2><pre><code>let string = &#39;30 Days Of JavaScript&#39;
+console.log(string.charCodeAt(3))        // D ASCII number is 68
+
+let lastIndex = string.length - 1
+console.log(string.charCodeAt(lastIndex)) // t ASCII is 116</code></pre><h2 id="indexOf-接受一个子字符串，如果子字符串在字符串中存在，它将返回子字符串的第一个位置，如果不存在则返回-1"><a href="#indexOf-接受一个子字符串，如果子字符串在字符串中存在，它将返回子字符串的第一个位置，如果不存在则返回-1" class="headerlink" title="indexOf(): 接受一个子字符串，如果子字符串在字符串中存在，它将返回子字符串的第一个位置，如果不存在则返回-1"></a>indexOf(): 接受一个子字符串，如果子字符串在字符串中存在，它将返回子字符串的第一个位置，如果不存在则返回-1</h2><pre><code>let string = &#39;30 Days Of JavaScript&#39;
+
+console.log(string.indexOf(&#39;D&#39;))          // 3
+console.log(string.indexOf(&#39;Days&#39;))       // 3
+console.log(string.indexOf(&#39;days&#39;))       // -1</code></pre><p>lastIndexOf(): 接受一个子字符串，如果子字符串在字符串中存在，则返回子字符串的最后一个位置，如果不存在则返回-1</p><pre><code>let string = &#39;I love JavaScript. If you do not love JavaScript what else can you love.&#39;
+
+console.log(string.lastIndexOf(&#39;love&#39;))       // 67
+console.log(string.lastIndexOf(&#39;you&#39;))        // 63</code></pre><h2 id="concat-它接受许多子字符串并连接它们。"><a href="#concat-它接受许多子字符串并连接它们。" class="headerlink" title="concat(): 它接受许多子字符串并连接它们。"></a>concat(): 它接受许多子字符串并连接它们。</h2><pre><code>string.concat(substring, substring, substring)</code></pre><h2 id="startsWith-它将一个子字符串作为参数，并检查该字符串是否以指定的子字符串开始。它返回一个布尔值-true或false-。"><a href="#startsWith-它将一个子字符串作为参数，并检查该字符串是否以指定的子字符串开始。它返回一个布尔值-true或false-。" class="headerlink" title="startsWith: 它将一个子字符串作为参数，并检查该字符串是否以指定的子字符串开始。它返回一个布尔值(true或false)。"></a>startsWith: 它将一个子字符串作为参数，并检查该字符串是否以指定的子字符串开始。它返回一个布尔值(true或false)。</h2><pre><code>let string = &#39;Love is the best to in this world&#39;
+
+console.log(string.startsWith(&#39;Love&#39;))   // true</code></pre><h2 id="endsWith-它将一个子字符串作为参数，并检查该字符串是否以指定的子字符串结束。它返回一个布尔值-true或false-。"><a href="#endsWith-它将一个子字符串作为参数，并检查该字符串是否以指定的子字符串结束。它返回一个布尔值-true或false-。" class="headerlink" title="endsWith: 它将一个子字符串作为参数，并检查该字符串是否以指定的子字符串结束。它返回一个布尔值(true或false)。"></a>endsWith: 它将一个子字符串作为参数，并检查该字符串是否以指定的子字符串结束。它返回一个布尔值(true或false)。</h2><pre><code>let string = &#39;Love is the most powerful feeling in the world&#39;
+
+console.log(string.endsWith(&#39;world&#39;))         // true</code></pre><h2 id="search-它接受子字符串作为参数，并返回第一个匹配的索引。搜索值可以是字符串或正则表达式模式。"><a href="#search-它接受子字符串作为参数，并返回第一个匹配的索引。搜索值可以是字符串或正则表达式模式。" class="headerlink" title="search: 它接受子字符串作为参数，并返回第一个匹配的索引。搜索值可以是字符串或正则表达式模式。"></a>search: 它接受子字符串作为参数，并返回第一个匹配的索引。搜索值可以是字符串或正则表达式模式。</h2><pre><code>let string = &#39;I love JavaScript. If you do not love JavaScript what else can you love.&#39;
+console.log(string.search(&#39;love&#39;))          // 2</code></pre><h2 id="match：将子字符串或正则表达式模式作为参数，如果匹配则返回数组，否则返回null。-让我们看看正则表达式模式的样子。-它以-符号开头，以-符号结尾。"><a href="#match：将子字符串或正则表达式模式作为参数，如果匹配则返回数组，否则返回null。-让我们看看正则表达式模式的样子。-它以-符号开头，以-符号结尾。" class="headerlink" title="match：将子字符串或正则表达式模式作为参数，如果匹配则返回数组，否则返回null。 让我们看看正则表达式模式的样子。 它以/符号开头，以/符号结尾。"></a>match：将子字符串或正则表达式模式作为参数，如果匹配则返回数组，否则返回null。 让我们看看正则表达式模式的样子。 它以/符号开头，以/符号结尾。</h2><pre><code>let string = &#39;I love JavaScript. If you do not love JavaScript what else can you love.&#39;
+console.log(string.match(&#39;love&#39;))
+console.log(string.match(/love/gi))   // [&quot;love&quot;, &quot;love&quot;, &quot;love&quot;]</code></pre><h2 id="repeat（）：它以数字作为参数，并返回字符串的重复版本。"><a href="#repeat（）：它以数字作为参数，并返回字符串的重复版本。" class="headerlink" title="repeat（）：它以数字作为参数，并返回字符串的重复版本。"></a>repeat（）：它以数字作为参数，并返回字符串的重复版本。</h2><pre><code>let string = &#39;love&#39;
+console.log(string.repeat(10)) // lovelovelovelovelovelovelovelovelovelove</code></pre><h1 id="字符串转浮点数"><a href="#字符串转浮点数" class="headerlink" title="字符串转浮点数"></a>字符串转浮点数</h1><p>我们可以将字符串浮点数转换为浮点数。 引号内的任何浮点数都是字符串浮点数。 字符串浮点数的示例：’9.81’，’3.14’，’1.44’等。我们可以使用以下方法将字符串浮点数转换为数字：</p><ol><li>parseFloat()</li><li>Number()</li><li>使用加号(+)</li></ol><pre><code>let num = &#39;9.81&#39;;
+let numFloat = parseFloat(num);
+let numFloat2 = Number(num);
+let numFloat3 = +num;
+
+console.log(numFloat); // 9.81
+</code></pre><h1 id="字符串转整数"><a href="#字符串转整数" class="headerlink" title="字符串转整数"></a>字符串转整数</h1><p>我们可以将浮点数转换为整数。 我们使用以下方法将float转换为int：</p><ol><li>parseInt()</li></ol><pre><code>let num = 9.81
+let numInt = parseInt(num)
+
+console.log(numInt); // 9</code></pre><hr></div><br><div><p><span><i class="iconfont icon-tag"></i> <a class="hover-with-bg" href="/tags/JavaScript%E7%9A%8430%E5%A4%A9%E5%9F%BA%E7%A1%80%E5%B7%A9%E5%9B%BA">JavaScript的30天基础巩固</a></span></p><p class="note note-warning">本博客所有文章除特别声明外，均采用 <a href="https://zh.wikipedia.org/wiki/Wikipedia:CC_BY-SA_3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" target="_blank" rel="nofollow noopener noopener">CC BY-SA 3.0协议</a> 。转载请注明出处！</p></div></div></div></div><div class="d-none d-lg-block col-lg-2 toc-container"><div id="toc"><p class="h4"><i class="far fa-list-alt"></i>&nbsp;目录</p><div id="tocbot"></div></div></div></div></div><div class="col-lg-7 mx-auto nopadding-md"><div class="container comments mx-auto" id="comments"></div></div></main><a class="z-depth-1" id="scroll-top-button" href="#" role="button"><i class="fa fa-chevron-up scroll-top-arrow" aria-hidden="true"></i></a><div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable modal-lg" role="document"><div class="modal-content"><div class="modal-header text-center"><h4 class="modal-title w-100 font-weight-bold">搜索</h4> <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span></button></div><div class="modal-body mx-3"><div class="md-form mb-5"> <input type="text" id="local-search-input" class="form-control validate"> <label data-error="x" data-success="v" for="local-search-input">关键词</label></div><div class="list-group" id="local-search-result"></div></div></div></div></div><footer class="mt-5"><div class="text-center py-3"><p> <b>猿生活</b> <a href="https://beianx.cn/bacx/%E8%9C%80icp%E5%A4%872020026020%E5%8F%B7-1" target="_blank" rel="nofollow noopener"><b>蜀ICP备2020026020号</b></a></p> &nbsp;<span id="busuanzi_container_site_pv"><span id="busuanzi_value_site_pv"></span></span> &nbsp; &nbsp;<span id="busuanzi_container_site_uv"><span id="busuanzi_value_site_uv"></span></span> &nbsp;<br></div></footer><script src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js"></script><script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script><script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script><script src="https://cdn.staticfile.org/mdbootstrap/4.8.9/js/mdb.min.js"></script><script src="/js/main.js"></script><script src="/js/lazyload.js"></script><script src="https://cdn.staticfile.org/tocbot/4.8.0/tocbot.min.js"></script><script src="/js/post.js"></script><script src="https://cdn.staticfile.org/smooth-scroll/16.1.0/smooth-scroll.min.js"></script><script src="https://cdn.staticfile.org/prettify/r298/prettify.min.js"></script><script>$(document).ready(function(){$("pre").addClass("prettyprint  linenums"),prettyPrint()})</script><script src="https://cdn.staticfile.org/typed.js/2.0.10/typed.min.js"></script><script>var typed=new Typed("#subtitle",{strings:["  ","JavaScript第二天&nbsp;"],cursorChar:"_",typeSpeed:70,loop:!1});typed.stop(),$(document).ready(function(){$(".typed-cursor").addClass("h2"),typed.start()})</script><script src="https://cdn.staticfile.org/anchor-js/4.2.0/anchor.min.js"></script><script>
+    anchors.options = {
+      placement: "right",
+      visible: "false",
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script><script src="/js/local-search.js"></script><script>var path="/local-search.xml",inputArea=document.querySelector("#local-search-input");inputArea.onclick=function(){getSearchFile(path),this.onclick=null}</script><script src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js"></script><script>$("#post img:not(.no-zoom img, img[no-zoom])").each(function(){var t=document.createElement("a");$(t).attr("data-fancybox","images"),$(t).attr("href",$(this).attr("src")),$(this).wrap(t)})</script><script type="text/javascript">var a_idx=0;jQuery(document).ready(function(d){d("body").click(function(a){var o=new Array("富强","民主","文明","和谐","自由","平等","公正","法治","爱国","敬业","诚信","友善"),t=d("<span/>").text(o[a_idx]);a_idx=(a_idx+1)%o.length;var n=a.pageX,e=a.pageY;t.css({"z-index":999,top:e-20,left:n,position:"absolute","font-weight":"bold",color:"rgb("+~~(255*Math.random())+","+~~(255*Math.random())+","+~~(255*Math.random())+")"}),d("body").append(t),t.animate({top:e-180,opacity:0},1500,function(){t.remove()})})})</script></body></html>

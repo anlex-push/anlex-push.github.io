@@ -1,0 +1,91 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><link rel="apple-touch-icon" sizes="76x76" href="/img/apple-touch-icon.png"><link rel="icon" type="image/png" href="/img/favicon.png"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,shrink-to-fit=no"><meta http-equiv="x-ua-compatible" content="ie=edge"><meta name="description" content=""><meta name="author" content="Anlex-Push"><meta name="keywords" content=""><title>JavaScript第三天 ~ Anlex-Push</title><link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/5.10.2/css/all.min.css"><link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css"><link rel="stylesheet" href="https://cdn.staticfile.org/mdbootstrap/4.8.9/css/mdb.min.css"><link rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/3.0.1/github-markdown.min.css"><link rel="stylesheet" href="//at.alicdn.com/t/font_1067060_qzomjdt8bmp.css"><link rel="stylesheet" href="/lib/prettify/tomorrow-night-eighties.min.css"><link rel="stylesheet" href="/css/main.css"><link rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css"><meta name="generator" content="Hexo 4.2.0"></head><body><header style="height:70vh"><nav id="navbar" class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar"><div class="container"> <a class="navbar-brand" href="/">&nbsp;<strong>Anlex-Push</strong>&nbsp;</a> <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><div class="animated-icon"><span></span><span></span><span></span></div></button><div class="collapse navbar-collapse" id="navbarSupportedContent"><ul class="navbar-nav ml-auto text-center"><li class="nav-item"> <a class="nav-link" href="/">首页</a></li><li class="nav-item"> <a class="nav-link" href="/archives/">归档</a></li><li class="nav-item"> <a class="nav-link" href="/categories/">分类</a></li><li class="nav-item"> <a class="nav-link" href="/tags/">标签</a></li><li class="nav-item"> <a class="nav-link" href="/about/">关于</a></li><li class="nav-item" id="search-btn"> <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;&nbsp;<i class="iconfont icon-search"></i>&nbsp;&nbsp;</a></li></ul></div></div></nav><div class="view intro-2" id="background" style="background:url(/img/article.png) no-repeat center center;background-size:cover;background-attachment:fixed"><div class="full-bg-img"><div class="mask rgba-black-light flex-center"><div class="container text-center white-text fadeInUp"><span class="h2" id="subtitle"></span><br><p class="mt-3"><i class="fas fa-calendar-alt" aria-hidden="true"></i> &nbsp; 星期二, 五月 11日 2021, 7:46 早上</p><p> &nbsp;<i class="far fa-chart-bar"></i> <span class="post-count">1.4k 字</span> &nbsp; &nbsp;<i class="far fa-clock"></i> <span class="post-count">6 分钟</span> &nbsp; &nbsp;<i class="far fa-eye" aria-hidden="true"></i>&nbsp;<span id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv"></span> 次</span> &nbsp;</p></div></div></div></div></header><main><div class="container-fluid"><div class="row"><div class="d-none d-lg-block col-lg-2"></div><div class="col-lg-8 nopadding-md"><div class="py-5 z-depth-3" id="board"><div class="post-content mx-auto" id="post"><div class="markdown-body"><p>开始学习挑战30天JavaScript的第三天。</p><h1 id="Booleans"><a href="#Booleans" class="headerlink" title="Booleans"></a>Booleans</h1><p>布尔数据类型表示两个值之一：true或false。 布尔值是true或false。 当您启动比较运算符时，将清楚使用这些数据类型。 任何比较都会返回一个布尔值，该布尔值可以为true或false。<br>示例：</p><pre><code>let isLightOn = true
+let isRaining = false
+let truValue = 4 &gt; 3    // true
+let falseValue = 4 &lt; 3  // false</code></pre><p>注意：</p><ol><li>除零外，所有数字（正数和负数）都是true</li><li>所有的字符串都是true</li><li>布尔值true</li></ol><h1 id="Undefined"><a href="#Undefined" class="headerlink" title="Undefined"></a>Undefined</h1><p>如果我们声明一个变量并且不分配值，则该值将是不确定的。 除此之外，如果一个函数没有返回值，它将是Undefined值</p><h1 id="Null"><a href="#Null" class="headerlink" title="Null"></a>Null</h1><p>空值</p><h1 id="算术运算符的数学运算符。"><a href="#算术运算符的数学运算符。" class="headerlink" title="算术运算符的数学运算符。"></a>算术运算符的数学运算符。</h1><ol><li>加（+）：a + b</li><li>减法（-）：a-b</li><li>乘法（*）：a * b</li><li>除（/）：a / b</li><li>模量（％）：a％b</li><li>指数（*<em>）：a *</em> b</li></ol><pre><code>let numOne = 4
+let numTwo = 3
+let sum = numOne + numTwo
+let diff = numOne - numTwo
+let mult = numOne * numTwo
+let div = numOne / numTwo
+let remainder = numOne % numTwo
+let powerOf = numOne ** numTwo
+
+console.log(sum, diff, mult, div, remainder, powerOf) // 7,1,12,1.33,1, 64</code></pre><h1 id="比较运算符"><a href="#比较运算符" class="headerlink" title="比较运算符"></a>比较运算符</h1><p>在编程中，我们比较值，我们使用比较运算符比较两个值。 我们检查一个值是大于还是小于或等于其他值。</p><pre><code>console.log(3 &gt; 2)              // true, because 3 is greater than 2
+console.log(3 &gt;= 2)             // true, because 3 is greater than 2
+console.log(3 &lt; 2)              // false,  because 3 is greater than 2
+console.log(2 &lt; 3)              // true, because 2 is less than 3
+console.log(2 &lt;= 3)             // true, because 2 is less than 3
+console.log(3 == 2)             // false, because 3 is not equal to 2
+console.log(3 != 2)             // true, because 3 is not equal to 2
+console.log(3 == &#39;3&#39;)           // true, compare only value
+console.log(3 === &#39;3&#39;)          // false, compare both value and data type
+console.log(3 !== &#39;3&#39;)          // true, compare both value and data type
+console.log(3 != 3)             // false, compare only value
+console.log(3 !== 3)            // false, compare both value and data type
+console.log(0 == false)         // true, equivalent
+console.log(0 === false)        // false, not exactly the same
+console.log(0 == &#39;&#39;)            // true, equivalent
+console.log(0 == &#39; &#39;)           // true, equivalent
+console.log(0 === &#39;&#39;)           // false, not exactly the same
+console.log(1 == true)          // true, equivalent
+console.log(1 === true)         // false, not exactly the same
+console.log(undefined == null)  // true
+console.log(undefined === null) // false
+console.log(NaN == NaN)         // false, not equal
+console.log(NaN === NaN)        // false
+console.log(typeof NaN)         // number
+
+console.log(&#39;mango&#39;.length == &#39;avocado&#39;.length)  // false
+console.log(&#39;mango&#39;.length != &#39;avocado&#39;.length)  // true
+console.log(&#39;mango&#39;.length &lt; &#39;avocado&#39;.length)   // true
+console.log(&#39;milk&#39;.length == &#39;meat&#39;.length)      // true
+console.log(&#39;milk&#39;.length != &#39;meat&#39;.length)      // false
+console.log(&#39;tomato&#39;.length == &#39;potato&#39;.length)  // true
+console.log(&#39;python&#39;.length &gt; &#39;dragon&#39;.length)   // false</code></pre><h1 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h1><p>以下符号是常见的逻辑运算符：&amp;&amp;（＆）和||（pipe）和！（negation）。 仅当两个操作数为true时，&amp;&amp;运算符才为true。 || 运算符为true，则任一操作数为true。 这 ！ 运算符否定“真到假”和“假到真”。</p><pre><code>// &amp;&amp; ampersand operator example
+
+const check = 4 &gt; 3 &amp;&amp; 10 &gt; 5         // true &amp;&amp; true -&gt; true
+const check = 4 &gt; 3 &amp;&amp; 10 &lt; 5         // true &amp;&amp; false -&gt; false
+const check = 4 &lt; 3 &amp;&amp; 10 &lt; 5         // false &amp;&amp; false -&gt; false
+
+// || pipe or operator, example
+
+const check = 4 &gt; 3 || 10 &gt; 5         // true  || true -&gt; true
+const check = 4 &gt; 3 || 10 &lt; 5         // true  || false -&gt; true
+const check = 4 &lt; 3 || 10 &lt; 5         // false || false -&gt; false
+
+//! Negation examples
+
+let check = 4 &gt; 3                     // true
+let check = !(4 &gt; 3)                  //  false
+let isLightOn = true
+let isLightOff = !isLightOn           // false
+let isMarried = !false                // true</code></pre><h1 id="增量运算符"><a href="#增量运算符" class="headerlink" title="增量运算符"></a>增量运算符</h1><p>在JavaScrip中，我们使用增量运算符来增加存储在变量中的值。 该增量可以是之前或之后的增量。 让我们看看它们中的每一个：</p><ol><li>前置递增</li></ol><pre><code>let count = 0
+console.log(++count)        // 1
+console.log(count)          // 1</code></pre><ol start="2"><li>后置递增</li></ol><pre><code>let count = 0
+console.log(count++)        // 0
+console.log(count)          // 1</code></pre><p>大多数情况下，我们使用增量后的时间。 至少您应该记住如何使用后增量运算符。</p><h1 id="递减运算符"><a href="#递减运算符" class="headerlink" title="递减运算符"></a>递减运算符</h1><p>在JavaScrip中，我们使用减量运算符来减小存储在变量中的值。 减量可以是前减量，也可以是后减量。 让我们看看它们中的每一个：</p><ol><li>前置递减</li></ol><pre><code>let count = 0
+console.log(--count) // -1
+console.log(count)  // -1</code></pre><ol start="2"><li>后置递减</li></ol><pre><code>let count = 0
+console.log(count--) // 0
+console.log(count)   // -1</code></pre><h1 id="三目运算"><a href="#三目运算" class="headerlink" title="三目运算"></a>三目运算</h1><p>三元运算符允许编写条件。 编写条件语句的另一种方法是使用三元运算符。 看下面的例子：</p><pre><code>let isRaining = true
+isRaining
+  ? console.log(&#39;You need a rain coat.&#39;)
+  : console.log(&#39;No need for a rain coat.&#39;)
+isRaining = false
+
+isRaining
+  ? console.log(&#39;You need a rain coat.&#39;)
+  : console.log(&#39;No need for a rain coat.&#39;)</code></pre><h1 id="运算符的优先级"><a href="#运算符的优先级" class="headerlink" title="运算符的优先级"></a>运算符的优先级</h1><p>我想建议您从此<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence" target="_blank" rel="noopener">链接</a>阅读有关操作员优先级的信息</p><h1 id="window-内置方法"><a href="#window-内置方法" class="headerlink" title="window 内置方法"></a>window 内置方法</h1><h2 id="window-alert"><a href="#window-alert" class="headerlink" title="window.alert()"></a>window.alert()</h2><p>如您刚开始看到的那样，alert（）方法将显示一个带有指定消息和“确定”按钮的警报框。 这是一个内置方法，它带有参数。</p><pre><code>alert(message)</code></pre><p>不要使用过多的警报，因为它会造成破坏和烦人，请仅将其用于测试。</p><h2 id="window-prompt"><a href="#window-prompt" class="headerlink" title="window.prompt();"></a>window.prompt();</h2><p>窗口提示方法在浏览器上显示一个带有输入的提示框，以获取输入值，并且输入数据可以存储在变量中。 tips（）方法有两个参数。 第二个参数是可选的。</p><pre><code>prompt(&#39;required text&#39;, &#39;optional text&#39;)</code></pre><h2 id="window-confirm"><a href="#window-confirm" class="headerlink" title="window.confirm()"></a>window.confirm()</h2><p>Confirm（）方法将显示一个对话框，其中包含指定的消息以及“确定”和“取消”按钮。 确认框通常用于请求用户许可以执行某些操作。 窗口confirm（）将字符串作为参数。 单击“确定”将产生真值，而单击“取消”按钮将产生假值。</p><pre><code>const agree = confirm(&#39;Are you sure you like to delete? &#39;)
+console.log(agree) // result will be true or false based on what you click on the dialog box</code></pre><hr></div><br><div><p><span><i class="iconfont icon-tag"></i> <a class="hover-with-bg" href="/tags/JavaScript%E7%9A%8430%E5%A4%A9%E5%9F%BA%E7%A1%80%E5%B7%A9%E5%9B%BA">JavaScript的30天基础巩固</a></span></p><p class="note note-warning">本博客所有文章除特别声明外，均采用 <a href="https://zh.wikipedia.org/wiki/Wikipedia:CC_BY-SA_3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" target="_blank" rel="nofollow noopener noopener">CC BY-SA 3.0协议</a> 。转载请注明出处！</p></div></div></div></div><div class="d-none d-lg-block col-lg-2 toc-container"><div id="toc"><p class="h4"><i class="far fa-list-alt"></i>&nbsp;目录</p><div id="tocbot"></div></div></div></div></div><div class="col-lg-7 mx-auto nopadding-md"><div class="container comments mx-auto" id="comments"></div></div></main><a class="z-depth-1" id="scroll-top-button" href="#" role="button"><i class="fa fa-chevron-up scroll-top-arrow" aria-hidden="true"></i></a><div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable modal-lg" role="document"><div class="modal-content"><div class="modal-header text-center"><h4 class="modal-title w-100 font-weight-bold">搜索</h4> <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span></button></div><div class="modal-body mx-3"><div class="md-form mb-5"> <input type="text" id="local-search-input" class="form-control validate"> <label data-error="x" data-success="v" for="local-search-input">关键词</label></div><div class="list-group" id="local-search-result"></div></div></div></div></div><footer class="mt-5"><div class="text-center py-3"><p> <b>猿生活</b> <a href="https://beianx.cn/bacx/%E8%9C%80icp%E5%A4%872020026020%E5%8F%B7-1" target="_blank" rel="nofollow noopener"><b>蜀ICP备2020026020号</b></a></p> &nbsp;<span id="busuanzi_container_site_pv"><span id="busuanzi_value_site_pv"></span></span> &nbsp; &nbsp;<span id="busuanzi_container_site_uv"><span id="busuanzi_value_site_uv"></span></span> &nbsp;<br></div></footer><script src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js"></script><script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script><script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script><script src="https://cdn.staticfile.org/mdbootstrap/4.8.9/js/mdb.min.js"></script><script src="/js/main.js"></script><script src="/js/lazyload.js"></script><script src="https://cdn.staticfile.org/tocbot/4.8.0/tocbot.min.js"></script><script src="/js/post.js"></script><script src="https://cdn.staticfile.org/smooth-scroll/16.1.0/smooth-scroll.min.js"></script><script src="https://cdn.staticfile.org/prettify/r298/prettify.min.js"></script><script>$(document).ready(function(){$("pre").addClass("prettyprint  linenums"),prettyPrint()})</script><script src="https://cdn.staticfile.org/typed.js/2.0.10/typed.min.js"></script><script>var typed=new Typed("#subtitle",{strings:["  ","JavaScript第三天&nbsp;"],cursorChar:"_",typeSpeed:70,loop:!1});typed.stop(),$(document).ready(function(){$(".typed-cursor").addClass("h2"),typed.start()})</script><script src="https://cdn.staticfile.org/anchor-js/4.2.0/anchor.min.js"></script><script>
+    anchors.options = {
+      placement: "right",
+      visible: "false",
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script><script src="/js/local-search.js"></script><script>var path="/local-search.xml",inputArea=document.querySelector("#local-search-input");inputArea.onclick=function(){getSearchFile(path),this.onclick=null}</script><script src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js"></script><script>$("#post img:not(.no-zoom img, img[no-zoom])").each(function(){var t=document.createElement("a");$(t).attr("data-fancybox","images"),$(t).attr("href",$(this).attr("src")),$(this).wrap(t)})</script><script type="text/javascript">var a_idx=0;jQuery(document).ready(function(d){d("body").click(function(a){var o=new Array("富强","民主","文明","和谐","自由","平等","公正","法治","爱国","敬业","诚信","友善"),t=d("<span/>").text(o[a_idx]);a_idx=(a_idx+1)%o.length;var n=a.pageX,e=a.pageY;t.css({"z-index":999,top:e-20,left:n,position:"absolute","font-weight":"bold",color:"rgb("+~~(255*Math.random())+","+~~(255*Math.random())+","+~~(255*Math.random())+")"}),d("body").append(t),t.animate({top:e-180,opacity:0},1500,function(){t.remove()})})})</script></body></html>
